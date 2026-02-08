@@ -262,6 +262,11 @@ html {
     font-size: 1rem;
     position: relative;
     overflow: hidden;
+    /* Layout properties for links */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     /* For shine effect */
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
@@ -346,7 +351,7 @@ html {
 }
 
 .light-bg {
-    background: var(--bg-light);
+    background: rgba(249, 250, 251);
 }
 
 .gray-bg {
@@ -933,49 +938,70 @@ html {
 }
 
 /* Service Section Specifics */
+/* Service Section Specifics - Updated */
 .section-header {
-    margin-bottom: 60px;
-}
-
-.section-header.center-text {
+    margin-bottom: 80px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.section-header h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 15px 0 25px;
-    line-height: 1.2;
-    color: var(--text-dark);
+.section-label {
+    display: block;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+.section-header h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+    color: var(--text-dark);
+    letter-spacing: -1px;
+    max-width: 800px;
+}
+
+.green-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+    margin-top: 25px;
 }
 
 .service-card {
     background: #fff;
-    border-radius: 12px;
-    padding: 35px 30px;
+    border-radius: 20px;
+    padding: 40px;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    /* Very subtle base shadow */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    /* Premium hover */
 }
 
 .icon-box {
     width: 60px;
     height: 60px;
     background: #e6fcf5;
-    border-radius: 10px;
+    /* Light green */
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -983,63 +1009,81 @@ html {
     color: var(--primary);
 }
 
+.icon-box .material-symbols-outlined {
+    font-size: 28px;
+}
+
 .service-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: var(--text-dark);
 }
 
 .service-card p {
-    font-size: 0.95rem;
-    color: #55605c;
+    font-size: 1rem;
+    color: #6b7280;
+    /* Gray-500 equivalent */
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    flex-grow: 1;
+    /* Push read more to bottom if needed */
 }
 
 .read-more {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     color: var(--primary);
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 700;
+    font-size: 0.95rem;
     text-decoration: none;
     transition: gap 0.2s ease;
+    margin-top: auto;
 }
 
 .read-more .material-symbols-outlined {
-    font-size: 1rem;
-    transition: transform 0.2s ease;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .read-more:hover {
-    gap: 12px;
+    gap: 10px;
 }
 
 /* Service CTA Card */
 .cta-wrapper {
     background: #fff;
-    border-radius: 12px;
-    padding: 60px 40px;
+    border-radius: 24px;
+    padding: 80px 40px;
+    /* More padding */
     text-align: center;
-    margin-top: 60px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-top: 80px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+    /* Stronger but soft shadow */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    /* For shine effects? */
 }
 
 .cta-wrapper h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
+    font-size: 2.2rem;
+    font-weight: 900;
+    /* Extra bold */
     color: var(--text-dark);
+    letter-spacing: -0.5px;
 }
 
 .cta-wrapper p {
     color: #55605c;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     max-width: 600px;
     margin-bottom: 20px;
@@ -1059,7 +1103,7 @@ html {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -1092,7 +1136,6 @@ html {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    /* Slightly softer shadow */
     border: 1px solid rgba(0, 0, 0, 0.02);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

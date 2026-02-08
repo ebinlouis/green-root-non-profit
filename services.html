@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | CompassionGlobal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d452",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Ensure Material Symbols work for Tailwind parts too */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b12] dark:text-white transition-colors duration-300">
+
+    <!-- Loader (Optional for consistency) -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- ================= HEADER (Original) ================= -->
+    <header class="header scrolled">
+        <div class="container nav">
+            <h2 class="logo">CompassionGlobal</h2>
+            <nav>
+                <a href="index.html#about">About</a>
+                <a href="services.html">Services</a>
+                <a href="index.html#team">Team</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <a href="donate.html" class="btn-primary">Donate</a>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT (Provided by User) ================= -->
+    <main class="flex flex-col items-center">
+        <section class="w-full bg-[#f9fafb] dark:bg-zinc-900/50 py-20 px-6 mt-32">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="flex flex-col items-center text-center mb-16">
+                    <span class="text-primary text-sm font-bold uppercase tracking-widest mb-3">How We Help</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 max-w-2xl">
+                        Building a better future through focused community initiatives.
+                    </h2>
+                    <div class="w-20 h-1 bg-primary rounded-full"></div>
+                </div>
+                <!-- Note: Ensure bg-white is compatible with dark mode if needed -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white dark:bg-background-dark p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-start border border-gray-100 dark:border-zinc-800">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#0d1b12] dark:text-white">Education Support</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-6">
+                            Empowering youth through accessible learning and skill development. We provide scholarships,
+                            school supplies, and vocational training to bridge the opportunity gap.
+                        </p>
+                        <a class="mt-auto flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all"
+                            href="#">
+                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-background-dark p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-start border border-gray-100 dark:border-zinc-800">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-3xl">medical_services</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#0d1b12] dark:text-white">Healthcare Access</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-6">
+                            Ensuring medical equity and wellness for underserved communities. Our mobile clinics and
+                            health education programs reach those in most critical need.
+                        </p>
+                        <a class="mt-auto flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all"
+                            href="#">
+                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-background-dark p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-start border border-gray-100 dark:border-zinc-800">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-3xl">home_work</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#0d1b12] dark:text-white">Sustainable Housing</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-6">
+                            Focusing on long-term stability and providing community shelter. We advocate for affordable
+                            housing and renovate local properties for families in crisis.
+                        </p>
+                        <a class="mt-auto flex items-center gap-2 text-primary font-bold text-sm hover:gap-3 transition-all"
+                            href="#">
+                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-20 px-6">
+            <div
+                class="max-w-[960px] mx-auto text-center bg-white dark:bg-background-dark rounded-2xl p-10 md:p-20 shadow-xl border border-gray-100 dark:border-zinc-800">
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">
+                    Ready to make a difference?
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-lg mb-10 max-w-xl mx-auto">
+                    Join our mission to create lasting change in the community. Whether through volunteering or
+                    donations, every action counts.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button
+                        class="min-w-[180px] h-12 rounded-lg bg-primary text-[#0d1b12] font-bold px-6 hover:brightness-95 transition-all">
+                        Volunteer Today
+                    </button>
+                    <button
+                        class="min-w-[180px] h-12 rounded-lg bg-gray-100 dark:bg-zinc-800 text-[#0d1b12] dark:text-white font-bold px-6 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-all">
+                        View All Programs
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-24 px-6 bg-white dark:bg-background-dark">
+            <div class="max-w-[1200px] mx-auto space-y-32">
+                <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+                    <div class="flex-1">
+                        <div class="aspect-[4/3] rounded-2xl bg-center bg-cover shadow-2xl overflow-hidden"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhpa95FQba5nWuWTxmqcvYSpOww-RiwttnX9daynVRwU3zxi2JCRbev0315T4BYn521gvK92CGygC86CnKZZFZ_7Hdvo_bl9ibRE2pYCppSEVdeL_3TU8lLVZPOiFdw-Qn5HjS0D5Oc0J1nHx0_2gGvXWvC6O3q3ARGt8kOpHZKTovElB_Hyvrgc3rHdeW_JZ1ik4-ix2q2-pQAcUWyaBQhnwjSBzXAcPz2lgImK6dl7eoveX6xqoq94jS02ekh2l4U_RXFivv2gky')">
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <span class="text-primary font-bold tracking-widest text-sm uppercase">Program Deep-Dive</span>
+                        <h2 class="text-3xl md:text-4xl font-bold leading-tight">Global Education Initiatives</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                            Our comprehensive education program focuses on removing barriers to learning. From digital
+                            literacy to higher education mentorship, we provide the tools needed for lifelong success.
+                        </p>
+                        <div class="space-y-4">
+                            <h4 class="font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary">analytics</span> Impact Results:</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                                    <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                    <span>92% graduation rate among mentored students.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                                    <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                    <span>250+ community learning centers established globally.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button
+                            class="h-12 px-8 rounded-lg bg-primary text-[#0d1b12] font-bold hover:brightness-95 transition-all mt-4">Support
+                            This Program</button>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-24">
+                    <div class="flex-1">
+                        <div class="aspect-[4/3] rounded-2xl bg-center bg-cover shadow-2xl overflow-hidden"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBB7_tUemOXhaqF0-aX0OpdpVtpF6kHO-ooESdetoekV5MWU7jeaA1UgaIOJlokElchfOAxswU9_BqIwOxAaQxW5az4ofjMjTavzLK81MAay__xHajIMCu4RRs2SX8MnEJ26wv5vWXCtTzEKRCkOp8XLlvYEEMUkmLndAeq2jWyLh45nM0vlsiq1i6zgorvt0fe1e0vWaw9Bp_v437yEPWQKxvQGFAtaIaH7mBWavwNtsF2_SveB3LiLUlW9kPuTcCimjbG4yVi6Qp-')">
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <span class="text-primary font-bold tracking-widest text-sm uppercase">Program Deep-Dive</span>
+                        <h2 class="text-3xl md:text-4xl font-bold leading-tight">Last-Mile Healthcare Delivery</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                            We bridge the gap between medical facilities and remote communities. Our fleet of mobile
+                            clinics provides essential care where traditional infrastructure fails.
+                        </p>
+                        <div class="space-y-4">
+                            <h4 class="font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary">analytics</span> Impact Results:</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                                    <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                    <span>15,000+ preventative screenings conducted annually.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                                    <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                    <span>Zero-cost prescriptions provided to 5,000+ patients.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button
+                            class="h-12 px-8 rounded-lg bg-primary text-[#0d1b12] font-bold hover:brightness-95 transition-all mt-4">Support
+                            This Program</button>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+                    <div class="flex-1">
+                        <div class="aspect-[4/3] rounded-2xl bg-center bg-cover shadow-2xl overflow-hidden"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2hA_NOZ9gZh-K4RFXLXbb4N_YQzl0TvSlo_GUplVPiD9BQBELJMVTP_YsuxYu71s63zpXGf9lkGE21r8_NTCRDS3x5Z9N_VrDvpiI92mVdPdmulJjaYLvT5Ajql0sPWyxlUlGrSUt66rXsjyvPLUVrccIWPNmqjpmi0DGpsdcQFAUZ7covBkPAfLJUhkOM61uLUFqKmdxZMCTt8BCEwDsz5QHTHazauF_tQXgTeiH1W3_iTS19mMOnse5lS6N87XrKid5OOa6nGrl')">
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <span class="text-primary font-bold tracking-widest text-sm uppercase">Program Deep-Dive</span>
+                        <h2 class="text-3xl md:text-4xl font-bold leading-tight">Sustainable Community Housing</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                            Beyond providing a roof, we build eco-friendly environments that foster community and
+                            growth. Our housing projects focus on long-term ownership and stability.
+                        </p>
+                        <div class="space-y-4">
+                            <h4 class="font-bold flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-primary">analytics</span> Impact Results:</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                                    <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                    <span>1,200+ families transitioned into permanent homes.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                                    <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                    <span>Solar-powered infrastructure reducing costs by 40%.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button
+                            class="h-12 px-8 rounded-lg bg-primary text-[#0d1b12] font-bold hover:brightness-95 transition-all mt-4">Support
+                            This Program</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-24 px-6 bg-[#f9fafb] dark:bg-zinc-900/50">
+            <div class="max-w-[1200px] mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Our Methodology</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">A proven four-step process ensures every
+                    project leads to measurable, sustainable change.</p>
+            </div>
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-200 dark:bg-gray-800 -z-0">
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div
+                        class="w-20 h-20 rounded-full bg-white dark:bg-background-dark border-4 border-primary flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">search</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Identify Needs</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">We conduct deep research to understand the root
+                        causes of community challenges.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div
+                        class="w-20 h-20 rounded-full bg-white dark:bg-background-dark border-4 border-primary flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">handshake</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Partner Locally</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">We work alongside local leaders and organizations
+                        to ensure cultural relevance.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div
+                        class="w-20 h-20 rounded-full bg-white dark:bg-background-dark border-4 border-primary flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">build_circle</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Implement Solutions</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Direct action and infrastructure building with a
+                        focus on long-term durability.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div
+                        class="w-20 h-20 rounded-full bg-white dark:bg-background-dark border-4 border-primary flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">legend_toggle</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Measure Impact</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Continuous tracking of data and personal stories to
+                        refine and scale success.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-24 px-6 bg-white dark:bg-background-dark overflow-hidden">
+            <div class="max-w-[1000px] mx-auto">
+                <div
+                    class="bg-primary/5 rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 border border-primary/10">
+                    <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-cover bg-center flex-shrink-0 shadow-xl"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6GljYGS3K2GQepahQVtAkkwjwTPTNboqN_f07pI2YI4iWivfDsILwWfD2yH62IZ6RwXLa8GDynMYNdmtje1F7ufZZPqdKHnuPi_nvBEs_2xY57tRhQG8ZFGUSld0GDJhoh2SUY0LHG3xA6HLl7pQOeZscujXdMiI4u9HdMzT9GnLU49HTbMVCTslNCKYWx2WHCiqHFNHsoS9sskiR89uxCLfxaU246SWBYjw1OCrBrmxqKFhU7tg5NWVKjLrFnlGgK5zlPR60qTYp')">
+                    </div>
+                    <div class="space-y-6">
+                        <span class="material-symbols-outlined text-primary text-5xl">format_quote</span>
+                        <p class="text-xl md:text-2xl font-medium italic text-gray-800 dark:text-gray-200">
+                            "The scholarship didn't just pay for my books; it gave me the confidence to believe I belong
+                            in a university. Today, I'm the first in my family to graduate, and it started here."
+                        </p>
+                        <div>
+                            <h5 class="text-lg font-bold">Elena Rodriguez</h5>
+                            <p class="text-primary font-medium text-sm">2021 Education Program Graduate</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <button
+                                class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center hover:bg-primary/10 transition-colors">
+                                <span class="material-symbols-outlined text-primary">arrow_back</span>
+                            </button>
+                            <button
+                                class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center hover:bg-primary/10 transition-colors">
+                                <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-24 px-6 bg-[#0d1b12] text-white">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                    <div class="text-center">
+                        <div class="text-4xl md:text-6xl font-black text-primary mb-2">50k+</div>
+                        <div class="text-gray-400 text-sm font-bold uppercase tracking-widest">Lives Impacted</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-6xl font-black text-primary mb-2">120+</div>
+                        <div class="text-gray-400 text-sm font-bold uppercase tracking-widest">Global Partners</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-6xl font-black text-primary mb-2">15m</div>
+                        <div class="text-gray-400 text-sm font-bold uppercase tracking-widest">Meals Served</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-6xl font-black text-primary mb-2">85%</div>
+                        <div class="text-gray-400 text-sm font-bold uppercase tracking-widest">Program ROI</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-24 px-6 bg-primary/10 dark:bg-primary/5">
+            <div class="max-w-[800px] mx-auto text-center space-y-8">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-[#0d1b12] dark:text-white">Become part of the
+                    solution.</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Whether you have an hour a week or a one-time gift to share, your contribution directly fuels these
+                    programs and changes lives. Let's build a better world together.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6 pt-4">
+                    <button
+                        class="h-14 px-10 rounded-xl bg-primary text-[#0d1b12] font-bold text-lg hover:shadow-lg hover:scale-105 transition-all">
+                        Volunteer Now
+                    </button>
+                    <a href="donate.html"
+                        class="h-14 px-10 rounded-xl border-2 border-[#0d1b12] dark:border-white text-[#0d1b12] dark:text-white font-bold text-lg hover:bg-[#0d1b12] hover:text-white dark:hover:bg-white dark:hover:text-background-dark transition-all flex items-center justify-center">
+                        Make a Donation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER (Original) ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="material-symbols-outlined logo-icon">eco</span>
+                        <h3>CompassionGlobal</h3>
+                    </div>
+                    <p>Empowering communities through sustainable action and transparent leadership. Join us in making a
+                        lasting impact.</p>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="index.html#team">Meet the Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Annual Report</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Join our mailing list for impact updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="disclaimer">By subscribing, you agree to our privacy policy.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 CompassionGlobal. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">local_police</span></a>
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">shutter_speed</span></a>
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">work</span></a>
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">share</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loader logic
+        document.body.style.overflow = 'hidden';
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                const loader = document.getElementById('loader-wrapper');
+                loader.style.opacity = '0';
+                setTimeout(function () {
+                    loader.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 500); // Shorter wait for internal pages
+        });
+
+        // Sticky Header logic - Always Scrolled
+        const header = document.querySelector('.header');
+        header.classList.add('scrolled'); // Ensure it's added on load
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY <= 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.add('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

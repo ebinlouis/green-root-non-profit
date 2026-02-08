@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | CompassionGlobal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#11d452',
+                        'background-light': '#f6f8f6',
+                        'background-dark': '#102216',
+                    },
+                    fontFamily: {
+                        display: ['Inter', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: '0.25rem',
+                        lg: '0.5rem',
+                        xl: '0.75rem',
+                        '2xl': '1rem',
+                        full: '9999px',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        /* Ensure Material Symbols work for Tailwind parts too */
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header scrolled">
+        <div class="container nav">
+            <h2 class="logo">CompassionGlobal</h2>
+            <nav>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <a href="donate.html" class="btn-primary">Donate</a>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main
+        class="flex flex-col items-center w-full min-h-screen bg-[#f8f9fa] dark:bg-black font-display text-[#111] pt-32 pb-12">
+        <!-- Page Header -->
+        <section class="max-w-4xl w-full px-5 pt-20 pb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-[#0d1b12] dark:text-white">
+                Contact: Inquiries & Support
+            </h1>
+            <p class="text-[#555] dark:text-gray-400 text-lg">
+                Have questions or want to learn more? We are here to help. Reach out to our team
+                today.
+            </p>
+        </section>
+
+        <!-- Top Contact Cards -->
+        <section class="max-w-3xl w-full px-5 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Email Card -->
+                <div
+                    class="bg-white dark:bg-[#111] p-6 rounded-2xl flex items-center gap-4 shadow-sm border border-gray-100 dark:border-gray-800">
+                    <div class="w-12 h-12 rounded-full bg-[#f0fdf4] flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[#11d452]">mail</span>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">
+                            EMAIL US
+                        </p>
+                        <a href="mailto:hello@nonprofit.org"
+                            class="font-semibold text-lg text-[#0d1b12] dark:text-white hover:text-[#11d452] transition-colors">hello@nonprofit.org</a>
+                    </div>
+                </div>
+
+                <!-- Phone Card -->
+                <div
+                    class="bg-white dark:bg-[#111] p-6 rounded-2xl flex items-center gap-4 shadow-sm border border-gray-100 dark:border-gray-800">
+                    <div class="w-12 h-12 rounded-full bg-[#f0fdf4] flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[#11d452]">call</span>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">
+                            CALL US
+                        </p>
+                        <a href="tel:+15550000000"
+                            class="font-semibold text-lg text-[#0d1b12] dark:text-white hover:text-[#11d452] transition-colors">+1
+                            (555) 000-0000</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use a container for the Form and subsequent sections -->
+        <div class="max-w-[1000px] w-full px-5 flex flex-col gap-20 pb-24">
+            <!-- Contact Form -->
+            <section
+                class="bg-white dark:bg-[#111] p-8 md:p-12 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-800">
+                <h2 class="text-2xl font-bold mb-8 text-[#0d1b12] dark:text-white">
+                    Send us a message
+                </h2>
+                <form class="flex flex-col gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label for="name" class="text-sm font-medium text-gray-600 dark:text-gray-300">Full
+                                Name</label>
+                            <input type="text" id="name" placeholder="John Doe"
+                                class="w-full px-5 py-4 rounded-xl bg-[#f6f8f6] dark:bg-[#222] border-none focus:ring-2 focus:ring-[#11d452]/50 outline-none transition-all placeholder-gray-400" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="email" class="text-sm font-medium text-gray-600 dark:text-gray-300">Email
+                                Address</label>
+                            <input type="email" id="email" placeholder="john@example.com"
+                                class="w-full px-5 py-4 rounded-xl bg-[#f6f8f6] dark:bg-[#222] border-none focus:ring-2 focus:ring-[#11d452]/50 outline-none transition-all placeholder-gray-400" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label for="subject"
+                            class="text-sm font-medium text-gray-600 dark:text-gray-300">Subject</label>
+                        <div class="relative">
+                            <select id="subject"
+                                class="w-full px-5 py-4 rounded-xl bg-[#f6f8f6] dark:bg-[#222] border-none focus:ring-2 focus:ring-[#11d452]/50 outline-none transition-all appearance-none cursor-pointer text-gray-600 dark:text-gray-300">
+                                <option>General Inquiry</option>
+                                <option>Volunteering</option>
+                                <option>Donations</option>
+                                <option>Partnership</option>
+                            </select>
+                            <span
+                                class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label for="message"
+                            class="text-sm font-medium text-gray-600 dark:text-gray-300">Message</label>
+                        <textarea id="message" rows="4" placeholder="How can we help you?"
+                            class="w-full px-5 py-4 rounded-xl bg-[#f6f8f6] dark:bg-[#222] border-none focus:ring-2 focus:ring-[#11d452]/50 outline-none transition-all resize-none placeholder-gray-400"></textarea>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="button"
+                            class="bg-[#11d452] text-[#0d1b12] font-bold px-10 py-4 rounded-full hover:shadow-lg hover:shadow-[#11d452]/30 hover:scale-105 transition-all duration-300">
+                            Send Message
+                        </button>
+                        <p class="flex items-center justify-center gap-2 text-xs text-gray-400 mt-4">
+                            <span class="material-symbols-outlined text-sm">lock</span>
+                            Your privacy is important to us. We never share your details.
+                        </p>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Why Reach Out -->
+            <section class="text-center">
+                <h3 class="text-xl font-bold mb-10 text-[#0d1b12] dark:text-white">
+                    Why Reach Out?
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-[#f0fdf4] flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-2xl text-[#11d452]">volunteer_activism</span>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 max-w-[200px]">
+                            Find volunteer opportunities that match your skills.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-[#f0fdf4] flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-2xl text-[#11d452]">savings</span>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 max-w-[200px]">
+                            Learn exactly how your donations are making an impact.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-[#f0fdf4] flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-2xl text-[#11d452]">handshake</span>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 max-w-[200px]">
+                            Discuss partnership opportunities for community growth.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Location & Hours -->
+            <section
+                class="bg-white dark:bg-[#111] p-4 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Map/Image -->
+                    <div class="h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden relative bg-gray-100 group">
+                        <!-- Map container without border, with hover effect -->
+                        <div class="absolute inset-0 bg-white flex items-center justify-center overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.507640204439!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1647000000000!5m2!1sen!2sus"
+                                width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+                                class="grayscale hover:grayscale-0 transition-all duration-500"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="p-4 md:p-8">
+                        <h3 class="text-2xl font-bold mb-8 text-[#0d1b12] dark:text-white">
+                            Location & Hours
+                        </h3>
+
+                        <div class="flex flex-col gap-8">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-[#11d452] mt-1">location_on</span>
+                                <div>
+                                    <h4 class="font-bold text-[#0d1b12] dark:text-white mb-1">
+                                        Headquarters
+                                    </h4>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm">
+                                        123 Impact Way, Suite 400<br />San Francisco, CA 94103
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-[#11d452] mt-1">schedule</span>
+                                <div>
+                                    <h4 class="font-bold text-[#0d1b12] dark:text-white mb-1">
+                                        Working Hours
+                                    </h4>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-1">
+                                        Monday - Friday: 9:00 AM - 6:00 PM
+                                    </p>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm">
+                                        Weekend: Closed (Support via Email)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="material-symbols-outlined logo-icon">eco</span>
+                        <h3>CompassionGlobal</h3>
+                    </div>
+                    <p>
+                        Empowering communities through sustainable action and transparent
+                        leadership. Join us in making a lasting impact.
+                    </p>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Our Services</a></li>
+                        <li><a href="team.html">Meet the Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Annual Report</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Join our mailing list for impact updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="disclaimer">By subscribing, you agree to our privacy policy.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 CompassionGlobal. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">local_police</span></a>
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">shutter_speed</span></a>
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">work</span></a>
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">share</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loader logic
+        document.body.style.overflow = 'hidden';
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                const loader = document.getElementById('loader-wrapper');
+                loader.style.opacity = '0';
+                setTimeout(function () {
+                    loader.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 500);
+        });
+
+        // Header scroll logic
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.add('scrolled'); // Always kept scrolled style for subpages
+            }
+        });
+    </script>
+</body>
+
+</html>

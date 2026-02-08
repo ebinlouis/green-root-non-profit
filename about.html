@@ -12,8 +12,44 @@
 
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d452",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Ensure Material Symbols work for Tailwind parts too */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,186 +59,336 @@
         <div class="loader"></div>
     </div>
 
-    <!-- ================= HEADER ================= -->
+    <!-- ================= HEADER (Original) ================= -->
     <header class="header scrolled">
         <div class="container nav">
             <h2 class="logo">CompassionGlobal</h2>
             <nav>
                 <a href="index.html#about">About</a>
                 <a href="index.html#services">Services</a>
-                <a href="index.html#team">Team</a>
+                <a href="team.html">Team</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
-            <button class="btn-primary">Donate</button>
+            <a href="donate.html" class="btn-primary">Donate</a>
         </div>
     </header>
 
-    <!-- ================= ABOUT HERO ================= -->
-    <section class="section page-top-spacer">
-        <div class="container grid-2">
-            <div class="about-image-container">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFrJYNCkH4uB7ri5Sel9o4kzKpq9IA335OgaIAySLDRYlMiZbHKPVZPZtSoDyuqLHRFYd5lPPu18vVPFed9jytZNCNIbOG9F1TT7kmek5z60naN1ZQ9NEWEPee8npJvCQKDKKMGL5kVW8TGlSUkSa_z_ZRv2NXZR9s6NxAXzFHckQ3q9ioTajI9wQQQA93xxixxvitqQX9MFxQ7agXMFT-dsTD4Zj21xSy0HHZX8fGI03rXWm4ybFGWawryyzkmph6JUqp-LFlLGZI"
-                    alt="Community Support">
-                <div class="about-stats">
-                    Over 5,000 community members supported in 2023.
-                </div>
-            </div>
-
-            <div class="about-content">
-                <span class="section-label">ABOUT US</span>
-                <h2>Our Heart is in the <br><span>Community</span></h2>
-                <div class="green-divider"></div>
-                <p>Our mission is driven by transparency and compassion. We work tirelessly to support local community
-                    projects and empower individuals through sustainable initiatives that create lasting impact.</p>
-                <p>We believe that every small action contributes to a larger wave of change. By focusing on grassroots
-                    development, we ensure that resources go directly to those who need them most.</p>
-                <div class="about-actions">
-                    <button class="btn-primary">Read More</button>
-                    <button class="btn-secondary">Our Values</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= VALUES ================= -->
-    <section class="section gray-bg">
-        <div class="container">
-            <div class="grid-3">
-                <!-- Compassion -->
-                <div class="service-card values-card">
-                    <div class="icon-box">
-                        <span class="material-symbols-outlined">volunteer_activism</span>
+    <!-- ================= MAIN CONTENT (New Tailwind Design) ================= -->
+    <main class="flex flex-col items-center w-full">
+        <!-- Hero -->
+        <section class="max-w-[1200px] w-full px-5 py-16 md:py-24 mt-20 mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/5 rounded-2xl blur-2xl group-hover:bg-primary/10 transition-all">
                     </div>
-                    <h3>Compassion</h3>
-                    <p>At the core of everything we do is a deep-seated empathy for the challenges faced by our
-                        neighbors.</p>
-                </div>
-
-                <!-- Transparency -->
-                <div class="service-card values-card">
-                    <div class="icon-box">
-                        <span class="material-symbols-outlined">visibility</span>
-                    </div>
-                    <h3>Transparency</h3>
-                    <p>We maintain open-book policies for all our donations and project funding, ensuring every dollar
-                        counts.</p>
-                </div>
-
-                <!-- Sustainability -->
-                <div class="service-card values-card">
-                    <div class="icon-box">
-                        <span class="material-symbols-outlined">eco</span>
-                    </div>
-                    <h3>Sustainability</h3>
-                    <p>We don't just provide temporary fixes; we build systems that empower communities to thrive
-                        independently.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= MISSION & VISION ================= -->
-    <section class="section">
-        <div class="container grid-2">
-            <div class="mission-box">
-                <h3>Our Mission</h3>
-                <p class="italic">"To foster resilient communities through transparent resource allocation and
-                    sustainable environmental stewardship, ensuring no one is left behind in our journey toward a
-                    greener
-                    future."</p>
-            </div>
-            <div class="mission-box">
-                <h3>Our Vision</h3>
-                <p>"A world where every community has the tools to sustain itself, where transparency is the standard
-                    for social impact, and where nature and humanity thrive in perfect harmony."</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= GRADIENT WRAPPER (What We Do + Stats) ================= -->
-    <div class="gradient-bg">
-        <!-- ================= WHAT WE DO ================= -->
-        <section class="section">
-            <div class="container">
-                <div class="section-desc" style="margin: 0 auto 60px; text-align: center;">
-                    <h2>What We Do</h2>
-                    <p>Transforming lives through focused intervention programs.</p>
-                </div>
-
-                <div class="grid-4">
-                    <!-- Community -->
-                    <div class="what-we-do-card">
-                        <div class="icon-box">
-                            <span class="material-symbols-outlined">groups</span>
+                    <div class="relative w-full aspect-square md:aspect-[4/5] bg-center bg-no-repeat bg-cover rounded-xl shadow-xl overflow-hidden"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFrJYNCkH4uB7ri5Sel9o4kzKpq9IA335OgaIAySLDRYlMiZbHKPVZPZtSoDyuqLHRFYd5lPPu18vVPFed9jytZNCNIbOG9F1TT7kmek5z60naN1ZQ9NEWEPee8npJvCQKDKKMGL5kVW8TGlSUkSa_z_ZRv2NXZR9s6NxAXzFHckQ3q9ioTajI9wQQQA93xxixxvitqQX9MFxQ7agXMFT-dsTD4Zj21xSy0HHZX8fGI03rXWm4ybFGWawryyzkmph6JUqp-LFlLGZI");'>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div
+                            class="absolute bottom-6 left-6 right-6 p-4 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+                            <p class="text-white text-sm font-medium">Over 5,000 community members supported in 2023.
+                            </p>
                         </div>
-                        <h3>Community</h3>
-                        <p class="text-sm" style="color: #6b7280; font-size: 0.9rem; line-height: 1.6;">Local support
-                            networks and social welfare infrastructure.</p>
                     </div>
-
-                    <!-- Education -->
-                    <div class="what-we-do-card">
-                        <div class="icon-box">
-                            <span class="material-symbols-outlined">school</span>
-                        </div>
-                        <h3>Education</h3>
-                        <p class="text-sm" style="color: #6b7280; font-size: 0.9rem; line-height: 1.6;">Workshops and
-                            scholarships for future sustainability leaders.</p>
+                </div>
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-4">
+                        <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">About Us</span>
+                        <h1
+                            class="text-[#0d1b12] dark:text-white tracking-tight text-4xl md:text-5xl font-extrabold leading-tight">
+                            Our Heart is in the Community
+                        </h1>
+                        <div class="w-16 h-1.5 bg-primary rounded-full mb-2"></div>
+                        <p class="text-[#4b5563] dark:text-gray-300 text-lg font-normal leading-relaxed">
+                            Our mission is driven by transparency and compassion. We work tirelessly to support local
+                            community projects and empower individuals through sustainable initiatives that create
+                            lasting impact.
+                        </p>
+                        <p class="text-[#4b5563] dark:text-gray-300 text-lg font-normal leading-relaxed">
+                            We believe that every small action contributes to a larger wave of change. By focusing on
+                            grassroots development, we ensure that resources go directly to those who need them most.
+                        </p>
                     </div>
-
-                    <!-- Environment -->
-                    <div class="what-we-do-card">
-                        <div class="icon-box">
-                            <span class="material-symbols-outlined">forest</span>
-                        </div>
-                        <h3>Environment</h3>
-                        <p class="text-sm" style="color: #6b7280; font-size: 0.9rem; line-height: 1.6;">Reforestation
-                            and
-                            urban greening projects across the region.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-[#0d1b12] text-base font-bold leading-normal tracking-[0.015em] hover:shadow-lg hover:shadow-primary/20 transition-all">
+                            <span>Read More</span>
+                        </button>
+                        <button
+                            class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 border-2 border-primary/20 bg-transparent text-[#0d1b12] dark:text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/5 transition-all">
+                            <span>Our Values</span>
+                        </button>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Volunteers -->
-                    <div class="what-we-do-card">
-                        <div class="icon-box">
-                            <span class="material-symbols-outlined">favorite</span>
-                        </div>
-                        <h3>Volunteers</h3>
-                        <p class="text-sm" style="color: #6b7280; font-size: 0.9rem; line-height: 1.6;">Direct
-                            engagement
+        <!-- Values -->
+        <section class="w-full bg-white dark:bg-background-dark/50 py-16 px-5">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="flex flex-col gap-4 p-8 rounded-2xl border border-primary/10 hover:border-primary/30 transition-all bg-background-light dark:bg-background-dark">
+                    <span class="material-symbols-outlined text-primary text-4xl">volunteer_activism</span>
+                    <h3 class="text-xl font-bold">Compassion</h3>
+                    <p class="text-sm text-[#4b5563] dark:text-gray-400">At the core of everything we do is a
+                        deep-seated empathy for the challenges faced by our neighbors.</p>
+                </div>
+                <div
+                    class="flex flex-col gap-4 p-8 rounded-2xl border border-primary/10 hover:border-primary/30 transition-all bg-background-light dark:bg-background-dark">
+                    <span class="material-symbols-outlined text-primary text-4xl">visibility</span>
+                    <h3 class="text-xl font-bold">Transparency</h3>
+                    <p class="text-sm text-[#4b5563] dark:text-gray-400">We maintain open-book policies for all our
+                        donations and project funding, ensuring every dollar counts.</p>
+                </div>
+                <div
+                    class="flex flex-col gap-4 p-8 rounded-2xl border border-primary/10 hover:border-primary/30 transition-all bg-background-light dark:bg-background-dark">
+                    <span class="material-symbols-outlined text-primary text-4xl">eco</span>
+                    <h3 class="text-xl font-bold">Sustainability</h3>
+                    <p class="text-sm text-[#4b5563] dark:text-gray-400">We don't just provide temporary fixes; we build
+                        systems that empower communities to thrive independently.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="max-w-[1200px] w-full px-5 py-20 mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="relative pl-8 border-l-4 border-primary/20">
+                    <h2 class="text-2xl font-extrabold mb-4 text-[#0d1b12] dark:text-white">Our Mission</h2>
+                    <p class="text-[#4b5563] dark:text-gray-300 leading-relaxed text-lg italic">
+                        "To foster resilient communities through transparent resource allocation and sustainable
+                        environmental stewardship, ensuring no one is left behind in our journey toward a greener
+                        future."
+                    </p>
+                </div>
+                <div class="relative pl-8 border-l-4 border-primary/20">
+                    <h2 class="text-2xl font-extrabold mb-4 text-[#0d1b12] dark:text-white">Our Vision</h2>
+                    <p class="text-[#4b5563] dark:text-gray-300 leading-relaxed text-lg">
+                        "A world where every community has the tools to sustain itself, where transparency is the
+                        standard for social impact, and where nature and humanity thrive in perfect harmony."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do -->
+        <section class="w-full bg-[#f0f4f1] dark:bg-[#0a160e] py-20 px-5">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold mb-4">What We Do</h2>
+                    <p class="text-[#4b5563] dark:text-gray-400">Transforming lives through focused intervention
+                        programs.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary mb-4 block text-3xl">groups</span>
+                        <h4 class="font-bold mb-2">Community</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Local support networks and
+                            social welfare infrastructure.</p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary mb-4 block text-3xl">school</span>
+                        <h4 class="font-bold mb-2">Education</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Workshops and scholarships
+                            for future sustainability leaders.</p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary mb-4 block text-3xl">forest</span>
+                        <h4 class="font-bold mb-2">Environment</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Reforestation and urban
+                            greening projects across the region.</p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-primary mb-4 block text-3xl">favorite</span>
+                        <h4 class="font-bold mb-2">Volunteers</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Direct engagement
                             opportunities for meaningful social work.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= STATS ================= -->
-        <section class="stats-section">
-            <div class="container">
-                <div class="grid-4">
-                    <div class="stat-item">
-                        <div class="stat-number">10,000+</div>
-                        <div class="stat-label">Beneficiaries</div>
+        <!-- Stats -->
+        <section class="w-full py-20 px-5 bg-primary/5">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <p class="text-4xl md:text-5xl font-black text-primary mb-2">10,000+</p>
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-60">Beneficiaries</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">250+</div>
-                        <div class="stat-label">Active Projects</div>
+                    <div>
+                        <p class="text-4xl md:text-5xl font-black text-primary mb-2">250+</p>
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-60">Active Projects</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Global Awards</div>
+                    <div>
+                        <p class="text-4xl md:text-5xl font-black text-primary mb-2">15+</p>
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-60">Global Awards</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Transparency</div>
+                    <div>
+                        <p class="text-4xl md:text-5xl font-black text-primary mb-2">100%</p>
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-60">Transparency</p>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
 
+        <!-- Quote -->
+        <section class="max-w-[1200px] w-full px-5 py-20 mx-auto">
+            <div
+                class="bg-white dark:bg-background-dark/30 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border border-primary/10">
+                <div class="shrink-0">
+                    <div class="size-48 md:size-64 rounded-full overflow-hidden border-8 border-primary/10">
+                        <img alt="Founder Portrait" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrcFyrfSHOTDy5zKBmCtgwT857T4u9Gh9AGkX_35lDSrG2K_iB_Y9RNJgj3v-6_CJkk6vgQRGHGET6el6Ei2qaclBdnT5-VjExETQuhs0GKm1kK_4jV4VgVHZtkVt9OcjZxq9b71H9Zr3xo1gzykW9U2X105AlUgX_lRMqitfb-qM0wJmoWqunwbhQS5antuvdm19Z4TFld8WUJjNwMMhwXLQ-rP8Lj-2cY7muBquLakRhoXPv2p5BJc90S-mF3hWTNcWQKEPx_qcX" />
+                    </div>
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <span
+                        class="material-symbols-outlined text-primary/30 text-6xl block mb-2 leading-none">format_quote</span>
+                    <p
+                        class="text-xl md:text-2xl font-medium leading-relaxed mb-6 italic text-[#0d1b12] dark:text-gray-100">
+                        "Change doesn't happen in isolation. It's the collective heartbeat of our community that drives
+                        every project we undertake. Together, we aren't just imagining a better world—we're building
+                        it."
+                    </p>
+                    <div>
+                        <h4 class="text-lg font-bold">Elena Sterling</h4>
+                        <p class="text-primary font-medium">Founder &amp; Executive Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Strategic Approach -->
+        <section class="w-full bg-white dark:bg-background-dark/50 py-20 px-5">
+            <div class="max-w-[1200px] mx-auto text-center">
+                <h2 class="text-3xl font-extrabold mb-16">Our Strategic Approach</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                    <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-primary/20 -z-10"></div>
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-white dark:border-background-dark shadow-lg">
+                            <span class="material-symbols-outlined text-3xl">hearing</span>
+                        </div>
+                        <h4 class="font-bold mb-2">1. Listen</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400">Understanding unique local needs through
+                            active listening.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-white dark:border-background-dark shadow-lg">
+                            <span class="material-symbols-outlined text-3xl">handshake</span>
+                        </div>
+                        <h4 class="font-bold mb-2">2. Collaborate</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400">Co-designing solutions with the people we
+                            serve.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-white dark:border-background-dark shadow-lg">
+                            <span class="material-symbols-outlined text-3xl">build</span>
+                        </div>
+                        <h4 class="font-bold mb-2">3. Implement</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400">Resource-efficient execution of high-impact
+                            programs.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-white dark:border-background-dark shadow-lg">
+                            <span class="material-symbols-outlined text-3xl">analytics</span>
+                        </div>
+                        <h4 class="font-bold mb-2">4. Measure</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400">Rigorous tracking of long-term sustainable
+                            outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- ================= FOOTER ================= -->
+        <!-- Transparency & Trust -->
+        <section class="max-w-[1200px] w-full px-5 py-20 mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border-t border-primary/10 pt-20">
+                <div>
+                    <h2 class="text-3xl font-extrabold mb-6">Transparency &amp; Trust</h2>
+                    <p class="text-[#4b5563] dark:text-gray-300 mb-8 leading-relaxed">
+                        We believe that accountability is non-negotiable. Our operations are fully audited, and we
+                        invite our donors to see exactly where their contributions go.
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
+                            <span class="material-symbols-outlined text-primary">verified</span>
+                            <div>
+                                <p class="text-xs font-bold text-primary uppercase">Registration ID</p>
+                                <p class="font-mono text-sm">NPC-2024-9988-EC</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
+                            <span class="material-symbols-outlined text-primary">description</span>
+                            <div>
+                                <p class="text-xs font-bold text-primary uppercase">Annual Reports</p>
+                                <a class="text-sm font-semibold underline hover:text-primary transition-colors"
+                                    href="#">Download 2023 Impact Report (PDF)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#0d1b12] dark:bg-black rounded-2xl p-8 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <span class="material-symbols-outlined text-9xl">security</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 relative z-10">Donation Confidence</h4>
+                    <ul class="space-y-4 relative z-10">
+                        <li class="flex gap-3 text-sm items-start">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span>92% of all donations go directly to program services.</span>
+                        </li>
+                        <li class="flex gap-3 text-sm items-start">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span>Annual independent third-party financial audits.</span>
+                        </li>
+                        <li class="flex gap-3 text-sm items-start">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span>Real-time project tracking available for recurring donors.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="w-full px-5 py-24 bg-background-dark text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <div
+                    class="absolute top-0 left-0 w-96 h-96 bg-primary/40 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2">
+                </div>
+            </div>
+            <div class="max-w-3xl mx-auto relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Be the Change You Wish to See</h2>
+                <p class="text-[#a8b3ac] text-lg mb-12">Whether you give your time or your resources, your support fuels
+                    the transformation of communities around the globe.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <button
+                        class="w-full sm:w-auto min-w-[200px] h-14 bg-primary text-[#0d1b12] font-black rounded-xl hover:scale-105 transition-transform">
+                        Donate Now
+                    </button>
+                    <button
+                        class="w-full sm:w-auto min-w-[200px] h-14 border-2 border-white/20 hover:border-white/50 text-white font-black rounded-xl transition-all">
+                        Get Involved
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER (Original) ================= -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
@@ -222,7 +408,7 @@
                     <ul>
                         <li><a href="index.html#about">About Us</a></li>
                         <li><a href="index.html#services">Our Services</a></li>
-                        <li><a href="index.html#team">Meet the Team</a></li>
+                        <li><a href="team.html">Meet the Team</a></li>
                         <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -261,7 +447,6 @@
             </div>
         </div>
     </footer>
-
 
     <script>
         // Loader logic
