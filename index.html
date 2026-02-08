@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CompassionGlobal | Together We Can Create Lasting Change</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <script>
+        // Disable scroll initially
+        document.body.style.overflow = 'hidden';
+
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                const loader = document.getElementById('loader-wrapper');
+                loader.style.opacity = '0';
+
+                setTimeout(function () {
+                    loader.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Re-enable scroll
+                }, 500); // Wait for transition
+            }, 3000); // 3 seconds
+        });
+    </script>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container nav">
+            <h2 class="logo">CompassionGlobal</h2>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="btn-primary">Donate</button>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <div class="hero-badge">
+                <span class="status-dot"></span> 2024 GLOBAL CAMPAIGN
+            </div>
+            <h1>Together, We Can<br>Create <span>Lasting Change</span></h1>
+            <p>Empowering communities through compassion and sustainable action. Join us in building a future where
+                everyone has the chance to thrive.</p>
+            <div class="hero-actions">
+                <button class="btn-primary">Donate Now</button>
+                <button class="btn-outline">Learn More <span
+                        class="material-symbols-outlined">arrow_forward</span></button>
+            </div>
+
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <span class="material-symbols-outlined">verified_user</span> GOLD PARTICIPANT
+                </div>
+                <div class="trust-item">
+                    <span class="material-symbols-outlined">diversity_1</span> TOP RATED CHARITY
+                </div>
+                <div class="trust-item">
+                    <span class="material-symbols-outlined">public</span> GLOBAL IMPACT
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+        <div class="container grid-2">
+            <div class="about-image-container">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5X-rlwQt7I1sRnived8wAVYvX0MJYw8JNO7_Auc5QanH-G1gSZ5SpoDVq47uGng67YozQ4Hy0MkqdAwVD3DHGuEJXuS_rSWahgw1RiixDz0YB3FQzdixH6uDrfhqgMt19GwCdB0gJKfH1WOz0DW4w34j5eckaOec7spxQqbKZwi4Ao_FR0xWJzOTPiypDVxpWMtNnKH4Evzx3V3uDflfRU-aZ6wB5Azc7-dwcgwaiDCmS_Ioq1L18ZAgFhHUst1xLUEx5D7mDzRmv"
+                    alt="About us">
+                <div class="about-stats">
+                    Over 5,000 community members supported in 2023.
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="section-label">About Us</span>
+                <h2>Our Heart is in the <br><span>Community</span></h2>
+                <div class="green-divider"></div>
+                <p>Our mission is driven by transparency and compassion. We work tirelessly to support local community
+                    projects and empower individuals through sustainable initiatives that create lasting impact.</p>
+                <p>We believe that every small action contributes to a larger wave of change. By focusing on grassroots
+                    development, we ensure that resources go directly to those who need them most.</p>
+                <div class="about-actions">
+                    <button class="btn-primary">Read More</button>
+                    <button class="btn-secondary">Our Values</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="section light-bg">
+        <div class="container">
+            <div class="section-header center-text">
+                <span class="section-label">HOW WE HELP</span>
+                <h2>Building a better future through <br>focused community initiatives.</h2>
+                <div class="green-divider mx-auto"></div>
+            </div>
+
+            <div class="grid-3">
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <span class="material-symbols-outlined">school</span>
+                    </div>
+                    <h3>Education Support</h3>
+                    <p>Empowering youth through accessible learning and skill development. We provide scholarships,
+                        school
+                        supplies, and vocational training to bridge the opportunity gap.</p>
+                    <a href="#" class="read-more">Read More <span
+                            class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <span class="material-symbols-outlined">medical_services</span>
+                    </div>
+                    <h3>Healthcare Access</h3>
+                    <p>Ensuring medical equity and wellness for underserved communities. Our mobile clinics and health
+                        education programs reach those in most critical need.</p>
+                    <a href="#" class="read-more">Read More <span
+                            class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <span class="material-symbols-outlined">home_work</span>
+                    </div>
+                    <h3>Sustainable Housing</h3>
+                    <p>Focusing on long-term stability and providing community shelter. We advocate for affordable
+                        housing
+                        and renovate local properties for families in crisis.</p>
+                    <a href="#" class="read-more">Read More <span
+                            class="material-symbols-outlined">arrow_forward</span></a>
+                </div>
+            </div>
+
+            <!-- CTA Card -->
+            <div class="cta-wrapper">
+                <h3>Ready to make a difference?</h3>
+                <p>Join our mission to create lasting change in the community. Whether through volunteering or
+                    donations,
+                    every action counts.</p>
+                <div class="cta-actions">
+                    <button class="btn-primary">Volunteer Today</button>
+                    <button class="btn-light">View All Programs</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TEAM ================= -->
+    <section id="team" class="section">
+        <div class="container">
+            <div class="section-header center-text">
+                <h2>Meet the People Behind Our <br>Mission</h2>
+                <div class="green-divider mx-auto"></div>
+                <p class="section-desc">Our dedicated leaders are driven by a passion for social change and a
+                    commitment to transparency, working tirelessly to make a lasting impact.</p>
+            </div>
+
+            <div class="grid-4">
+                <!-- Member 1 -->
+                <div class="team-card">
+                    <div class="img-wrapper">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-AnLOhApI-h4mrdLLlUg-K155RmoR7IhXhILBY-xPK6NE7HtJEq9xtvLKUIkntxSsBA8L0iaRSI2QO08OMuAVzBzGVNYnFYLVXbFCT57uJAHB4m8dkLkCbInnVE0rNGzFXjbpCeQ4RoUGA1xEqYMWOD3fKl9oiewYXlDz32d7HxKAhGNQK4y7NJZzVm8X8n5DcgtEftku7iVsrxNLV41yZ6eyNdNwkQyCKsi1D1riHvJEIhKb2z8HToJCjR3-Fp2BKwbYF2UsEJ5h"
+                            alt="Jane Doe">
+                    </div>
+                    <h4>Jane Doe</h4>
+                    <p class="role">EXECUTIVE DIRECTOR</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card">
+                    <div class="img-wrapper">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeLMJr2I1p2t5yA_KCEwHAE6vKXAnL0KubGb4-g8WJXGbWW0Wam3AtDTx0hUCcRiZq7B6HbTKBmVJ_3M0xf-HYYQA5DaTVdubkbJVm6Z3ZtGVPbIpQbRtZzlLTj8MQc9e27-PzXhCtT5zwpFfzqgcHFRcn5a3mVeip_A2RdZRxkLeABS_9s-BDbHx1jG4tbUamPfJ6pQFwAc6Fih7PpnNcQ0rvXfB1x2gEWdHTVSSuMey126zsL__hYN9AV55pbX6TrJO8aaZk6wM5"
+                            alt="John Smith">
+                    </div>
+                    <h4>John Smith</h4>
+                    <p class="role">PROGRAM MANAGER</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300&h=300"
+                            alt="Sarah Chen">
+                    </div>
+                    <h4>Sarah Chen</h4>
+                    <p class="role">DIRECTOR OF OUTREACH</p>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300&h=300"
+                            alt="Michael Ross">
+                    </div>
+                    <h4>Michael Ross</h4>
+                    <p class="role">VOLUNTEER COORDINATOR</p>
+                </div>
+            </div>
+
+            <div class="center-btn">
+                <button class="btn-view-all">View All Members <span
+                        class="material-symbols-outlined">arrow_forward</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section light-bg">
+        <div class="container contact-container">
+            <div class="section-header center-text">
+                <h2>Get in Touch</h2>
+                <!-- No divider in this specific design, just spacing -->
+                <p class="section-desc">Have questions or want to learn more? We are here to
+                    help. Reach out to our team today.</p>
+            </div>
+
+            <div class="contact-cards">
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <div class="card-content">
+                        <div class="icon-square">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-label">EMAIL US</span>
+                            <a href="mailto:hello@nonprofit.org" class="card-value">hello@nonprofit.org</a>
+                        </div>
+                    </div>
+                    <span class="status-dot-small"></span>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="contact-card">
+                    <div class="card-content">
+                        <div class="icon-square">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-label">CALL US</span>
+                            <a href="tel:+15550000000" class="card-value">+1 (555) 000-0000</a>
+                        </div>
+                    </div>
+                    <span class="status-dot-small"></span>
+                </div>
+            </div>
+
+            <div class="contact-cta">
+                <button class="btn-contact-lg">Contact Us <span
+                        class="material-symbols-outlined">arrow_forward</span></button>
+                <p class="response-time">We typically respond within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="material-symbols-outlined logo-icon">eco</span>
+                        <h3>CompassionGlobal</h3>
+                    </div>
+                    <p>Empowering communities through sustainable action and transparent leadership. Join us in making a
+                        lasting impact.</p>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#team">Meet the Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Annual Report</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Join our mailing list for impact updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="disclaimer">By subscribing, you agree to our privacy policy.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 CompassionGlobal. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">local_police</span></a>
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">shutter_speed</span></a>
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">work</span></a>
+                    <a href="#" class="social-icon"><span class="material-symbols-outlined">share</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+
+</html>
