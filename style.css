@@ -5,6 +5,17 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Global Card Pointer */
+.card,
+.service-card,
+.team-card,
+.contact-card,
+.what-we-do-card,
+.testimonial-card,
+.values-card {
+    cursor: pointer;
+}
+
 :root {
     --primary: #11d452;
     --text-dark: #0d1b12;
@@ -99,6 +110,21 @@ html {
     height: 100%;
 }
 
+/* About Section Specifics */
+#about {
+    background-color: #f8fcfa;
+    /* Subtle off-white for separation */
+    padding: 100px 0;
+    /* Increased padding for premium feel */
+}
+
+/* Services Section Specifics */
+#services {
+    background-color: #f2f7f5;
+    /* Cool gray/green for contrast */
+    padding: 100px 0;
+}
+
 .header.scrolled .logo {
     color: var(--text-dark);
 }
@@ -142,6 +168,7 @@ html {
     border-radius: 50px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
@@ -169,7 +196,13 @@ html {
 }
 
 .nav .btn-primary:hover {
-    box-shadow: none;
+    background: #0ebc49;
+    /* Maintain green background */
+    color: #fff;
+    /* maintain white text */
+    box-shadow: 0 4px 15px rgba(21, 219, 88, 0.4);
+    /* Restore shadow */
+    transform: scale(1.05);
 }
 
 .hero {
@@ -185,7 +218,8 @@ html {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    /* Use theme's dark color (#0d1b12) for warmer, integrated overlay */
+    background: linear-gradient(to bottom, rgba(13, 27, 18, 0.4), rgba(13, 27, 18, 0.85));
 }
 
 .hero-content {
@@ -198,7 +232,9 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    align-items: center;
+    gap: 40px;
+    /* Increased gap for premium spacing */
 }
 
 /* Badge */
@@ -230,7 +266,11 @@ html {
     font-size: 4rem;
     line-height: 1.1;
     font-weight: 800;
+    line-height: 1.1;
+    font-weight: 800;
     letter-spacing: -1px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* Soft, large diffusion shadow */
 }
 
 .hero h1 span {
@@ -241,7 +281,11 @@ html {
     font-size: 1.1rem;
     line-height: 1.6;
     max-width: 700px;
-    opacity: 0.9;
+    max-width: 700px;
+    opacity: 0.95;
+    /* Increased opacity slightly */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* Better readability */
 }
 
 /* Buttons */
@@ -258,7 +302,8 @@ html {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
+    /* Bolder font */
     font-size: 1rem;
     position: relative;
     overflow: hidden;
@@ -268,24 +313,14 @@ html {
     justify-content: center;
     text-decoration: none;
     /* For shine effect */
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(21, 219, 88, 0.4);
+    /* Default shadow for prominence */
 }
 
-/* Shine effect */
+/* Shine effect - REMOVED per user request for simpler zoom/color change */
 .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-    transition: 0.5s;
-    z-index: 1;
-}
-
-.btn-primary:hover::before {
-    left: 100%;
+    display: none;
 }
 
 /* Ensure text is above shine */
@@ -295,9 +330,14 @@ html {
 }
 
 .btn-primary:hover {
-    background: #fff;
-    color: var(--primary);
-    box-shadow: 0 10px 20px rgba(21, 219, 88, 0.4);
+    background: #0ebc49;
+    /* Slightly darker green on hover */
+    color: #fff;
+    /* Keep white text */
+    transform: scale(1.05);
+    /* Zoom effect */
+    box-shadow: 0 4px 15px rgba(21, 219, 88, 0.4);
+    /* Keep shadow consistent, no extra glow */
 }
 
 .btn-outline {
@@ -464,10 +504,13 @@ html {
 
 /* Footer */
 .footer {
-    background: #fff;
-    border-top: 1px solid #f1f1f1;
+    background: #f9fafb;
+    /* Match contact section */
+    border-top: 1px solid #e5e7eb;
+    /* Slightly darker border for visibility */
     padding: 80px 0 30px;
-    margin-top: 60px;
+    margin-top: 0;
+    /* Remove gap */
 }
 
 .footer-top {
@@ -733,10 +776,13 @@ html {
 }
 
 .about-content {
-    padding: 20px 0;
+    padding: 20px 0 20px 40px;
+    /* Added left padding for breathing room */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 15px;
+    /* Consistent gap */
 }
 
 .section-label {
@@ -766,9 +812,11 @@ html {
 }
 
 .about-content p {
-    color: #55605c;
-    line-height: 1.7;
-    margin-bottom: 20px;
+    color: #4a5551;
+    /* Slightly darker for better readability */
+    line-height: 1.8;
+    /* Increased line-height for comfort */
+    margin-bottom: 25px;
     font-size: 1.05rem;
 }
 
@@ -982,8 +1030,8 @@ html {
     text-align: left;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-    /* Very subtle base shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    /* Refined base shadow */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -992,8 +1040,7 @@ html {
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    /* Premium hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .icon-box {
