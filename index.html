@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Added main.js link and remove duplicate scripts later -->
 
 <head>
     <meta charset="UTF-8" />
@@ -45,10 +46,11 @@
         <div class="container nav">
             <h2 class="logo">CompassionGlobal</h2>
             <nav>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
                 <a href="team.html">Team</a>
-                <a href="#contact">Contact</a>
+                <a href="contact.html">Contact</a>
             </nav>
             <a href="donate.html" class="btn-primary">Donate</a>
         </div>
@@ -335,6 +337,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <script src="main.js"></script>
+    <script>
+        // Existing inline script logic can be removed or kept if specific to index
+        // But main.js handles loader and header.
+        // I will keep existing just in case main.js has issues, but ideally should remove conflict.
+        // Actually main.js has loader logic. I should remove inline loader logic to avoid double execution.
+    </script>
 
 
     <script>

@@ -31,6 +31,56 @@ html {
     scrollbar-gutter: stable;
     background-color: #0d1b12;
     /* Match loader background to hide gutter flash */
+    scroll-behavior: smooth;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(17, 212, 82, 0.4);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background: #0ebc49;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(17, 212, 82, 0.5);
+}
+
+#back-to-top .material-symbols-outlined {
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    #back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
 }
 
 /* Loader Styles */
@@ -142,6 +192,33 @@ html {
     color: var(--primary);
 }
 
+/* Dark Nav for Inner Pages (Always White) */
+.header.dark-nav {
+    padding: 15px 0;
+}
+
+.header.dark-nav::before {
+    height: 100%;
+}
+
+.header.dark-nav .logo {
+    color: var(--text-dark);
+}
+
+.header.dark-nav .nav nav {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.header.dark-nav .nav a {
+    color: var(--text-dark);
+}
+
+.header.dark-nav .nav a:hover,
+.header.dark-nav .nav a.active {
+    color: var(--primary);
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -183,7 +260,8 @@ html {
     transition: color 0.3s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.active {
     background: transparent;
     color: var(--primary);
     box-shadow: none;
@@ -223,15 +301,15 @@ html {
 }
 
 .hero-content {
-    position: relative;
     z-index: 1;
     color: #fff;
     text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
+    /* max-width: 900px; - REMOVED for full width alignment */
+    /* margin: 0 auto; - Default container auto margin is fine */
     display: flex;
     flex-direction: column;
     align-items: center;
+
     align-items: center;
     gap: 40px;
     /* Increased gap for premium spacing */
@@ -280,8 +358,8 @@ html {
 .hero p {
     font-size: 1.1rem;
     line-height: 1.6;
-    max-width: 700px;
-    max-width: 700px;
+    max-width: 800px;
+    /* Slightly wider than before but still readable */
     opacity: 0.95;
     /* Increased opacity slightly */
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -1112,9 +1190,9 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    /* max-width: 900px; - REMOVED for full width alignment */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
     position: relative;
     overflow: hidden;
     /* For shine effects? */
@@ -1162,21 +1240,24 @@ html {
 
 /* Contact Section */
 .contact-container {
-    max-width: 700px;
-    margin: 0 auto;
+    /* max-width: 700px; - REMOVED for full width alignment */
+    /* margin: 0 auto; */
 }
 
 .contact-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    /* Switch to grid for full width usage */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     margin-bottom: 40px;
     margin-top: -40px;
+    /* Assuming this negative margin was intentional for design, kept */
 }
 
 .contact-card {
     background: #fff;
-    padding: 20px 30px;
+    padding: 30px;
+    /* Slightly more padding */
     border-radius: 24px;
     /* Increased radius */
     display: flex;
@@ -1286,6 +1367,11 @@ html {
 }
 
 @media (max-width: 600px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
+    }
+
     .contact-card {
         padding: 20px;
     }

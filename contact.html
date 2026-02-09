@@ -1,5 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<!-- Added main.js link and remove duplicate scripts later -->
 
 <head>
     <meta charset="UTF-8" />
@@ -63,12 +64,13 @@
     </div>
 
     <!-- ================= HEADER ================= -->
-    <header class="header scrolled">
+    <header class="header dark-nav">
         <div class="container nav">
             <h2 class="logo">CompassionGlobal</h2>
             <nav>
-                <a href="index.html#about">About</a>
-                <a href="index.html#services">Services</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
                 <a href="team.html">Team</a>
                 <a href="contact.html" class="active">Contact</a>
             </nav>
@@ -294,8 +296,8 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#services">Our Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
                         <li><a href="team.html">Meet the Team</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -336,6 +338,13 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <script src="main.js"></script>
+
     <script>
         // Loader logic
         document.body.style.overflow = 'hidden';
@@ -350,15 +359,15 @@
             }, 500);
         });
 
-        // Header scroll logic
-        const header = document.querySelector('.header');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 10) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.add('scrolled'); // Always kept scrolled style for subpages
-            }
-        });
+        // Header scroll logic handled by CSS (.dark-nav) and main.js
+        // const header = document.querySelector('.header');
+        // window.addEventListener('scroll', function () {
+        //     if (window.scrollY > 10) {
+        //         header.classList.add('scrolled');
+        //     } else {
+        //         header.classList.add('scrolled'); // Always kept scrolled style for subpages
+        //     }
+        // });
     </script>
 </body>
 
