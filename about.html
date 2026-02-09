@@ -472,27 +472,20 @@
         });
 
         // Sticky Header logic - MODIFIED for About Page (Always Scrolled)
-        // We add 'scrolled' by default and only toggle the shadow if needed, 
+        // We add 'scrolled' by default and only toggle the shadow if needed,
         // OR we can just keep it simpler and always have it 'scrolled' so it's visible.
         // But the user specifically asked for "initial state... should be style of scroll"
-        const header = document.querySelector('.header');
-        header.classList.add('scrolled'); // Ensure it's added on load
+        // Sticky Header logic handled by CSS (.dark-nav) and main.js
+        // const header = document.querySelector('.header');
+        // header.classList.add('scrolled');
 
-        window.addEventListener('scroll', function () {
-            // We want to KEEP the scrolled look always, so we don't remove the class.
-            // We might want to add *additional* shadow on scroll if the 'scrolled' style defaults to no shadow?
-            // In style.css: .header.scrolled uses box-shadow: none (shadow is on ::before).
-            // .header::before has opacity/background.
-
-            // To be safe and match the user's request: "initial state... should be the style of scroll".
-            // So we just ensure the class is always there.
-            if (window.scrollY <= 50) {
-                // Even at top, keep it scrolled style to be visible against white bg
-                header.classList.add('scrolled');
-            } else {
-                header.classList.add('scrolled');
-            }
-        });
+        // window.addEventListener('scroll', function () {
+        //     if (window.scrollY <= 50) {
+        //         header.classList.add('scrolled');
+        //     } else {
+        //         header.classList.add('scrolled');
+        //     }
+        // });
     </script>
 </body>
 
