@@ -121,8 +121,9 @@ html {
     padding: 0 1.25rem;
 }
 
-/* Force header container width to prevent Tailwind overrides on inner pages */
-.header .container {
+/* Force header and footer container width to prevent Tailwind overrides on inner pages */
+.header .container,
+.footer .container {
     max-width: 1200px !important;
     margin: 0 auto !important;
     width: 100% !important;

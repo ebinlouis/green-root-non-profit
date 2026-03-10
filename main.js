@@ -76,6 +76,17 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(error => console.error("Error loading navbar:", error));
     }
+
+    // Load Footer Dynamically
+    const footerPlaceholder = document.getElementById("footer-placeholder");
+    if (footerPlaceholder) {
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                footerPlaceholder.innerHTML = data;
+            })
+            .catch(error => console.error("Error loading footer:", error));
+    }
 });
 
 
