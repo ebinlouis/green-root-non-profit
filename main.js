@@ -17,7 +17,16 @@ window.addEventListener('load', function () {
 function initHeaderScroll() {
     const header = document.querySelector('.header');
     if (header) {
-        // Check initial scroll position
+        const currentPath = window.location.pathname.split("/").pop();
+        const isHomePage = currentPath === "" || currentPath === "index.html";
+
+        if (!isHomePage) {
+            // Force scrolled state and static background for inner pages, without giving them the scroll listener
+            header.classList.add('scrolled');
+            return;
+        }
+
+        // Check initial scroll position for home page
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         }
