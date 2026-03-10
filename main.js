@@ -13,22 +13,61 @@ window.addEventListener('load', function () {
     }, 1500); // 1.5 seconds loader
 });
 
-// Header Scroll Effect
-const header = document.querySelector('.header');
-if (header) {
-    // Check initial scroll position
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    }
-
-    window.addEventListener('scroll', function () {
+// Header Scroll Effect - Re-initialized recursively
+function initHeaderScroll() {
+    const header = document.querySelector('.header');
+    if (header) {
+        // Check initial scroll position
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
         }
-    });
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
 }
+initHeaderScroll();
+
+// Load Navbar Dynamically
+document.addEventListener("DOMContentLoaded", () => {
+    const navbarPlaceholder = document.getElementById("navbar-placeholder");
+    if (navbarPlaceholder) {
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                navbarPlaceholder.innerHTML = data;
+
+                // Highlight active link
+                const currentPath = window.location.pathname.split("/").pop();
+                const navLinks = document.querySelectorAll("#navbar-links a");
+                navLinks.forEach(link => {
+                    const href = link.getAttribute("href");
+                    if (href === currentPath || (currentPath === "" && href === "index.html")) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                });
+
+                // Apply correct scroll styling
+                initHeaderScroll();
+
+                // Add dark-nav class if NOT on index page, to display dark text on white backgrounds
+                if (currentPath !== "" && currentPath !== "index.html") {
+                    const headerEl = document.querySelector(".header");
+                    if (headerEl) {
+                        headerEl.classList.add("dark-nav");
+                    }
+                }
+            })
+            .catch(error => console.error("Error loading navbar:", error));
+    }
+});
 
 
 // Back to Top Button Logic
