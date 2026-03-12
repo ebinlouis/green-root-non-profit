@@ -107,21 +107,30 @@ p,
 
 /* ---------------- HERO SECTION ---------------- */
 /* Overlay for readability */
-.hero {
-    position: relative;
+section.hero {
+    position: relative !important;
+    background-image: url("kerala_support_hero_1773168419206.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
-.hero::after {
+section.hero::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    /* Added dark overlay for readability */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)) !important;
+    /* Clean dark gradient overlay for deep readability of white/gold text over complex images */
     z-index: 1;
     /* Should sit below content but above image */
+}
+
+/* Base style.css has an explicit .hero-overlay class too, we should override it to match */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.35) !important;
 }
 
 /* Ensure content sits above overlay */
