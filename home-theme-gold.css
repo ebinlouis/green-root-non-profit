@@ -6,8 +6,8 @@
    - Gold Hover: #B8963F
    - Main Text: #1F2937
    - Secondary Text: #4B5563
-   - Background: #F8FAF9
-   - Card Background: #FFFFFF
+   - Background: #F9F7F5
+   - Card Background: #FCFBF9
 ========================================= */
 
 :root {
@@ -15,14 +15,28 @@
     --gold-hover: #B8963F;
     --text-main: #1F2937;
     --text-sec: #4B5563;
-    --bg-main: #F8FAF9;
-    --bg-card: #FFFFFF;
+    --bg-main: #F9F7F5;
+    --bg-card: #FCFBF9;
 }
 
 /* Base Changes */
 body {
     background-color: var(--bg-main) !important;
     color: var(--text-sec) !important;
+}
+
+/* Loader Override */
+#loader-wrapper {
+    background: #111822 !important; /* Softer dark background */
+}
+
+.loader {
+    border: 5px solid rgba(255, 255, 255, 0.05) !important;
+    border-top: 5px solid var(--gold-primary) !important;
+}
+
+html {
+    background-color: #111822 !important; /* Match loader wrapper */
 }
 
 h1,
@@ -48,6 +62,32 @@ p,
     background: transparent !important;
     box-shadow: none !important;
     padding-top: 15px !important;
+    transition: all 0.4s ease !important;
+}
+
+.header.scrolled {
+    background: var(--bg-card) !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.header.scrolled #navbar-links a,
+.header.scrolled .nav a {
+    color: var(--text-main) !important;
+}
+
+.header.scrolled #navbar-links a:hover,
+.header.scrolled .nav a:hover,
+.header.scrolled #navbar-links a.active,
+.header.scrolled .nav a.active {
+    color: var(--gold-primary) !important;
+}
+
+.header.scrolled #navbar-links {
+    background: rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: none !important;
 }
 
 /* Floating Pill Container */
@@ -271,7 +311,7 @@ section.hero::after {
 /* ---------------- CTA SECTION ---------------- */
 .cta-wrapper,
 .cta-section {
-    background: linear-gradient(135deg, #f9f6ef, #ffffff) !important;
+    background: linear-gradient(135deg, #f9f6ef, var(--bg-card)) !important;
     border-radius: 14px !important;
 }
 
@@ -303,6 +343,8 @@ section.hero::after {
 .team-card img {
     border: 3px solid var(--gold-primary) !important;
     box-sizing: border-box !important;
+    background: transparent !important;
+    box-shadow: 0 0 15px rgba(201, 162, 74, 0.2) !important; /* Gold glow instead of green */
 }
 
 .team-card {
@@ -316,11 +358,14 @@ section.hero::after {
 .btn-view-all {
     color: var(--gold-primary) !important;
     border-color: var(--gold-primary) !important;
+    background: #F4E9D3 !important; /* Light gold background instead of light green */
+    box-shadow: none !important;
 }
 
 .btn-view-all:hover {
     background-color: var(--gold-primary) !important;
     color: #FFFFFF !important;
+    box-shadow: 0 4px 15px rgba(201, 162, 74, 0.3) !important;
 }
 
 /* ---------------- CONTACT SECTION ---------------- */
@@ -346,8 +391,19 @@ section.hero::after {
     color: var(--gold-primary) !important;
 }
 
+.contact-card h5,
+.contact-card a {
+    color: var(--text-main) !important;
+    transition: color 0.3s ease !important;
+}
+
+.contact-card a:hover {
+    color: var(--gold-primary) !important;
+}
+
 .status-dot-small {
     background: var(--gold-primary) !important;
+    box-shadow: 0 0 8px var(--gold-primary) !important; /* Gold glow instead of green */
 }
 
 .btn-contact-lg {
@@ -378,6 +434,30 @@ section.hero::after {
     color: #FFFFFF !important;
 }
 
+.footer-logo .logo-icon {
+    color: var(--gold-primary) !important;
+}
+
+.newsletter-form button {
+    background: var(--gold-primary) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.newsletter-form button:hover {
+    background: var(--gold-hover) !important;
+}
+
+.footer-logo h3 {
+    color: var(--text-main) !important;
+}
+
+.footer-links a:hover {
+    color: var(--gold-primary) !important;
+}
+
+
 /* ---------------- GENERAL OVERRIDES ---------------- */
 .text-\[\#11d452\] {
     color: var(--gold-primary) !important;
@@ -401,10 +481,12 @@ section.hero::after {
 
 #back-to-top {
     background: var(--gold-primary) !important;
+    box-shadow: 0 4px 15px rgba(201, 162, 74, 0.4) !important; /* Gold shadow instead of green */
 }
 
 #back-to-top:hover {
     background: var(--gold-hover) !important;
+    box-shadow: 0 6px 20px rgba(201, 162, 74, 0.5) !important;
 }
 
 /* Remove green shadows from all primary buttons globally on Homepage */
