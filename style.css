@@ -498,7 +498,7 @@ html {
     text-align: center;
     color: #55605c;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .team-card {
@@ -527,6 +527,7 @@ html {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    object-position: top;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -556,9 +557,11 @@ html {
     color: var(--text-main);
     border: 1px solid #E5D5B8;
     border-radius: 50px;
+    padding: 12px 28px;
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -1063,7 +1066,7 @@ html {
 /* Service Section Specifics */
 /* Service Section Specifics - Updated */
 .section-header {
-    margin-bottom: 80px;
+    margin-bottom: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1245,10 +1248,9 @@ html {
     display: grid;
     /* Switch to grid for full width usage */
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 40px;
-    margin-top: -40px;
-    /* Assuming this negative margin was intentional for design, kept */
+    gap: 40px;
+    margin-bottom: 50px;
+    margin-top: 40px;
 }
 
 .contact-card {
