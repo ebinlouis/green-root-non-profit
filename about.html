@@ -26,9 +26,9 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#11d452",
-                        "background-light": "#f6f8f6",
-                        "background-dark": "#102216",
+                        "primary": "#C9A24A",
+                        "background-light": "#F9F7F5",
+                        "background-dark": "#111822",
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"],
@@ -61,21 +61,7 @@
     </div>
 
     <!-- ================= HEADER (Original) ================= -->
-    <header class="header dark-nav">
-        <div class="container nav">
-            <a href="index.html" class="logo">
-                <img src="logo-jpg-removebg-preview-1.png" alt="CompassionGlobal">
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="services.html">Services</a>
-                <a href="team.html">Team</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <a href="donate.html" class="btn-primary">Donate</a>
-        </div>
-    </header>
+    <div id="navbar-placeholder"></div>
 
     <!-- ================= MAIN CONTENT (New Tailwind Design) ================= -->
     <main class="flex flex-col items-center w-full">
@@ -87,7 +73,7 @@
                         class="absolute -inset-4 bg-primary/5 rounded-2xl blur-2xl group-hover:bg-primary/10 transition-all">
                     </div>
                     <div class="relative w-full aspect-square md:aspect-[4/5] bg-center bg-no-repeat bg-cover rounded-xl shadow-xl overflow-hidden"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFrJYNCkH4uB7ri5Sel9o4kzKpq9IA335OgaIAySLDRYlMiZbHKPVZPZtSoDyuqLHRFYd5lPPu18vVPFed9jytZNCNIbOG9F1TT7kmek5z60naN1ZQ9NEWEPee8npJvCQKDKKMGL5kVW8TGlSUkSa_z_ZRv2NXZR9s6NxAXzFHckQ3q9ioTajI9wQQQA93xxixxvitqQX9MFxQ7agXMFT-dsTD4Zj21xSy0HHZX8fGI03rXWm4ybFGWawryyzkmph6JUqp-LFlLGZI");'>
+                        style='background-image: url("kerala_family_story.png");'>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         <div
                             class="absolute bottom-6 left-6 right-6 p-4 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
@@ -100,27 +86,28 @@
                     <div class="flex flex-col gap-4">
                         <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase">About Us</span>
                         <h1
-                            class="text-[#0d1b12] dark:text-white tracking-tight text-4xl md:text-5xl font-extrabold leading-tight">
-                            Our Heart is in the Community
+                            class="text-[#1F2937] dark:text-white tracking-tight text-4xl md:text-5xl font-extrabold leading-tight">
+                            Our Heart is in the Soul of Kerala
                         </h1>
                         <div class="w-16 h-1.5 bg-primary rounded-full mb-2"></div>
                         <p class="text-[#4b5563] dark:text-gray-300 text-lg font-normal leading-relaxed">
-                            Our mission is driven by transparency and compassion. We work tirelessly to support local
-                            community projects and empower individuals through sustainable initiatives that create
-                            lasting impact.
+                            From the tranquil backwaters to the vibrant hills of Wayanad, we are dedicated to
+                            empowering Kerala's local communities. Our mission is built on transparency,
+                            compassion, and a deep-rooted commitment to sustainable local development.
                         </p>
                         <p class="text-[#4b5563] dark:text-gray-300 text-lg font-normal leading-relaxed">
-                            We believe that every small action contributes to a larger wave of change. By focusing on
-                            grassroots development, we ensure that resources go directly to those who need them most.
+                            We believe in grassroots change. By working directly with families in districts like
+                            Idukki and Alappuzha, we ensure that every contribution fuels measurable progress
+                            across God's Own Country.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-4">
                         <button
-                            class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-[#0d1b12] text-base font-bold leading-normal tracking-[0.015em] hover:shadow-lg hover:shadow-primary/20 transition-all">
+                            class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:shadow-lg hover:shadow-primary/20 transition-all">
                             <span>Read More</span>
                         </button>
                         <button
-                            class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 border-2 border-primary/20 bg-transparent text-[#0d1b12] dark:text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/5 transition-all">
+                            class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 border-2 border-primary/20 bg-transparent text-[#1F2937] dark:text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/5 transition-all">
                             <span>Our Values</span>
                         </button>
                     </div>
@@ -129,10 +116,10 @@
         </section>
 
         <!-- Values -->
-        <section class="w-full bg-white dark:bg-background-dark/50 py-16 px-5">
+        <section class="w-full bg-background-light dark:bg-background-dark/50 py-16 px-5">
             <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div
-                    class="flex flex-col gap-4 p-8 rounded-2xl border border-primary/10 hover:border-primary/30 transition-all bg-background-light dark:bg-background-dark">
+                    class="flex flex-col gap-4 p-8 rounded-2xl border border-primary/10 hover:border-primary/30 transition-all bg-background-light/50 dark:bg-background-dark">
                     <span class="material-symbols-outlined text-primary text-4xl">volunteer_activism</span>
                     <h3 class="text-xl font-bold">Compassion</h3>
                     <p class="text-sm text-[#4b5563] dark:text-gray-400">At the core of everything we do is a
@@ -159,15 +146,15 @@
         <section class="max-w-[1200px] w-full px-5 py-20 mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <div class="relative pl-8 border-l-4 border-primary/20">
-                    <h2 class="text-2xl font-extrabold mb-4 text-[#0d1b12] dark:text-white">Our Mission</h2>
+                    <h2 class="text-2xl font-extrabold mb-4 text-[#1F2937] dark:text-white">Our Mission</h2>
                     <p class="text-[#4b5563] dark:text-gray-300 leading-relaxed text-lg italic">
-                        "To foster resilient communities through transparent resource allocation and sustainable
-                        environmental stewardship, ensuring no one is left behind in our journey toward a greener
-                        future."
+                        "To foster resilient Kerala communities through transparent resource allocation and
+                        sustainable stewardship of our natural heritage, ensuring no one is left behind in our
+                        shared journey toward a greener future."
                     </p>
                 </div>
                 <div class="relative pl-8 border-l-4 border-primary/20">
-                    <h2 class="text-2xl font-extrabold mb-4 text-[#0d1b12] dark:text-white">Our Vision</h2>
+                    <h2 class="text-2xl font-extrabold mb-4 text-[#1F2937] dark:text-white">Our Vision</h2>
                     <p class="text-[#4b5563] dark:text-gray-300 leading-relaxed text-lg">
                         "A world where every community has the tools to sustain itself, where transparency is the
                         standard for social impact, and where nature and humanity thrive in perfect harmony."
@@ -177,34 +164,34 @@
         </section>
 
         <!-- What We Do -->
-        <section class="w-full bg-[#f0f4f1] dark:bg-[#0a160e] py-20 px-5">
+        <section class="w-full bg-background-light dark:bg-background-dark py-20 px-5 border-t border-primary/10">
             <div class="max-w-[1200px] mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold mb-4">What We Do</h2>
+                    <h2 class="text-3xl font-extrabold mb-4 text-[#1F2937] dark:text-white">What We Do</h2>
                     <p class="text-[#4b5563] dark:text-gray-400">Transforming lives through focused intervention
                         programs.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div
-                        class="bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        class="bg-background-light/50 dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-primary/5">
                         <span class="material-symbols-outlined text-primary mb-4 block text-3xl">groups</span>
-                        <h4 class="font-bold mb-2">Community</h4>
-                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Local support networks and
-                            social welfare infrastructure.</p>
+                        <h4 class="font-bold mb-2">Backwaters</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Sustainable aquatic
+                            ecosystems and support for houseboat communities in Alappuzha.</p>
                     </div>
                     <div
-                        class="bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        class="bg-background-light/50 dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-primary/5">
                         <span class="material-symbols-outlined text-primary mb-4 block text-3xl">school</span>
-                        <h4 class="font-bold mb-2">Education</h4>
-                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Workshops and scholarships
-                            for future sustainability leaders.</p>
+                        <h4 class="font-bold mb-2">Organic Farms</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Empowering hill station
+                            farmers in Munnar and Idukki with sustainable techniques.</p>
                     </div>
                     <div
-                        class="bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        class="bg-background-light/50 dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-primary/5">
                         <span class="material-symbols-outlined text-primary mb-4 block text-3xl">forest</span>
-                        <h4 class="font-bold mb-2">Environment</h4>
-                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Reforestation and urban
-                            greening projects across the region.</p>
+                        <h4 class="font-bold mb-2">Coastal Care</h4>
+                        <p class="text-sm text-[#4b5563] dark:text-gray-400 leading-relaxed">Comprehensive mangrove
+                            restoration and coastal protection across Kochi's shores.</p>
                     </div>
                     <div
                         class="bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -218,12 +205,12 @@
         </section>
 
         <!-- Stats -->
-        <section class="w-full py-20 px-5 bg-primary/5">
+        <section class="w-full py-20 px-5 bg-primary/5 border-y border-primary/10">
             <div class="max-w-[1200px] mx-auto">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div>
-                        <p class="text-4xl md:text-5xl font-black text-primary mb-2">10,000+</p>
-                        <p class="text-xs uppercase tracking-widest font-bold opacity-60">Beneficiaries</p>
+                        <p class="text-4xl md:text-5xl font-black text-primary mb-2">25k+</p>
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-60">Kerala Lives Impacted</p>
                     </div>
                     <div>
                         <p class="text-4xl md:text-5xl font-black text-primary mb-2">250+</p>
@@ -244,39 +231,40 @@
         <!-- Quote -->
         <section class="max-w-[1200px] w-full px-5 py-20 mx-auto">
             <div
-                class="bg-white dark:bg-background-dark/30 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border border-primary/10">
+                class="bg-[#FCFBF9] dark:bg-background-dark/30 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border border-primary/10">
                 <div class="shrink-0">
-                    <div class="size-48 md:size-64 rounded-full overflow-hidden border-8 border-primary/10">
-                        <img alt="Founder Portrait" class="w-full h-full object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrcFyrfSHOTDy5zKBmCtgwT857T4u9Gh9AGkX_35lDSrG2K_iB_Y9RNJgj3v-6_CJkk6vgQRGHGET6el6Ei2qaclBdnT5-VjExETQuhs0GKm1kK_4jV4VgVHZtkVt9OcjZxq9b71H9Zr3xo1gzykW9U2X105AlUgX_lRMqitfb-qM0wJmoWqunwbhQS5antuvdm19Z4TFld8WUJjNwMMhwXLQ-rP8Lj-2cY7muBquLakRhoXPv2p5BJc90S-mF3hWTNcWQKEPx_qcX" />
+                    <div
+                        class="size-48 md:size-64 rounded-full overflow-hidden border-8 border-primary/10 shadow-2xl scale-105">
+                        <img alt="Kerala Family Story" class="w-full h-full object-cover"
+                            src="kerala_family_story.png" />
                     </div>
                 </div>
                 <div class="flex-1 text-center md:text-left">
                     <span
                         class="material-symbols-outlined text-primary/30 text-6xl block mb-2 leading-none">format_quote</span>
                     <p
-                        class="text-xl md:text-2xl font-medium leading-relaxed mb-6 italic text-[#0d1b12] dark:text-gray-100">
+                        class="text-xl md:text-2xl font-medium leading-relaxed mb-6 italic text-[#1F2937] dark:text-gray-100">
                         "Change doesn't happen in isolation. It's the collective heartbeat of our community that drives
                         every project we undertake. Together, we aren't just imagining a better world—we're building
                         it."
                     </p>
                     <div>
-                        <h4 class="text-lg font-bold">Elena Sterling</h4>
-                        <p class="text-primary font-medium">Founder &amp; Executive Director</p>
+                        <h4 class="text-lg font-bold uppercase tracking-tight">Community Stories</h4>
+                        <p class="text-primary font-bold italic">The heart of our mission in Kerala.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Strategic Approach -->
-        <section class="w-full bg-white dark:bg-background-dark/50 py-20 px-5">
+        <section class="w-full bg-[#FCFBF9] dark:bg-background-dark/50 py-20 px-5">
             <div class="max-w-[1200px] mx-auto text-center">
                 <h2 class="text-3xl font-extrabold mb-16">Our Strategic Approach</h2>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
                     <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-primary/20 -z-10"></div>
                     <div class="flex flex-col items-center">
                         <div
-                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-white dark:border-background-dark shadow-lg">
+                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-[#FCFBF9] dark:border-background-dark shadow-lg">
                             <span class="material-symbols-outlined text-3xl">hearing</span>
                         </div>
                         <h4 class="font-bold mb-2">1. Listen</h4>
@@ -285,7 +273,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <div
-                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-white dark:border-background-dark shadow-lg">
+                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-[#FCFBF9] dark:border-background-dark shadow-lg">
                             <span class="material-symbols-outlined text-3xl">handshake</span>
                         </div>
                         <h4 class="font-bold mb-2">2. Collaborate</h4>
@@ -294,7 +282,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <div
-                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-white dark:border-background-dark shadow-lg">
+                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-[#FCFBF9] dark:border-background-dark shadow-lg">
                             <span class="material-symbols-outlined text-3xl">build</span>
                         </div>
                         <h4 class="font-bold mb-2">3. Implement</h4>
@@ -303,7 +291,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <div
-                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-white dark:border-background-dark shadow-lg">
+                            class="size-20 rounded-full bg-primary flex items-center justify-center text-white mb-6 border-4 border-[#FCFBF9] dark:border-background-dark shadow-lg">
                             <span class="material-symbols-outlined text-3xl">analytics</span>
                         </div>
                         <h4 class="font-bold mb-2">4. Measure</h4>
@@ -380,7 +368,7 @@
                     the transformation of communities around the globe.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
                     <button
-                        class="w-full sm:w-auto min-w-[200px] h-14 bg-primary text-[#0d1b12] font-black rounded-xl hover:scale-105 transition-transform">
+                        class="w-full sm:w-auto min-w-[200px] h-14 bg-primary text-white font-black rounded-xl hover:scale-105 transition-transform">
                         Donate Now
                     </button>
                     <button
@@ -393,64 +381,7 @@
     </main>
 
     <!-- ================= FOOTER (Original) ================= -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <!-- Brand Column -->
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="material-symbols-outlined logo-icon">eco</span>
-                        <h3>CompassionGlobal</h3>
-                    </div>
-                    <p>Empowering communities through sustainable action and transparent leadership. Join us in making a
-                        lasting impact.</p>
-                </div>
-
-                <!-- Links Column -->
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="team.html">Meet the Team</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Resources Column -->
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Annual Report</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter Column -->
-                <div class="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Join our mailing list for impact updates.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                    <p class="disclaimer">By subscribing, you agree to our privacy policy.</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2024 CompassionGlobal. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">local_police</span></a>
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">shutter_speed</span></a>
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">work</span></a>
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">share</span></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" title="Back to Top">

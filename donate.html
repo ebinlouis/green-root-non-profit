@@ -25,9 +25,9 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#11d452",
-                        "background-light": "#f6f8f6",
-                        "background-dark": "#102216",
+                        "primary": "#C9A24A",
+                        "background-light": "#F9F7F5",
+                        "background-dark": "#111822",
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"],
@@ -62,29 +62,15 @@
 
 
     <!-- ================= HEADER ================= -->
-    <header class="header dark-nav">
-        <div class="container nav">
-            <a href="index.html" class="logo">
-                <img src="logo-jpg-removebg-preview-1.png" alt="CompassionGlobal">
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="team.html">Team</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <a href="donate.html" class="btn-primary">Donate</a>
-        </div>
-    </header>
+    <div id="navbar-placeholder"></div>
 
     <!-- ================= MAIN CONTENT ================= -->
-    <main class="flex flex-col items-center w-full pt-28 bg-[#f8f9fa] dark:bg-black font-display font-medium">
+    <main class="flex flex-col items-center w-full pt-28 bg-background-light dark:bg-background-dark font-display font-medium">
 
         <!-- Support Our Mission Hero -->
         <section class="max-w-[1240px] w-full px-5 py-8 md:py-12 mx-auto">
             <div
-                class="bg-[#2c4034] dark:bg-[#1a2e1a] rounded-[2rem] px-8 py-20 text-center text-white relative overflow-hidden">
+                class="bg-background-dark rounded-[2rem] px-8 py-20 text-center text-white relative overflow-hidden">
                 <!-- Decorative Circle (if needed, but design is clean) -->
                 <div class="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
                     <h1 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">Support Our Mission</h1>
@@ -94,7 +80,7 @@
                     </p>
                     <div class="flex gap-4">
                         <a href="#donation-form"
-                            class="bg-[#11d452] text-[#0d1b12] font-bold px-8 py-3 rounded-full hover:bg-[#0ebc49] transition-all duration-300 shadow-lg hover:shadow-[#11d452]/40 hover:-translate-y-1">
+                            class="bg-primary text-white font-bold px-8 py-3 rounded-full hover:brightness-110 transition-all duration-300 shadow-lg hover:shadow-primary/40 hover:-translate-y-1">
                             Start Giving
                         </a>
                         <button
@@ -110,52 +96,50 @@
         <section class="max-w-[1240px] w-full px-5 py-12 mx-auto">
             <div class="flex justify-between items-end mb-10">
                 <div>
-                    <h2 class="text-2xl font-black text-[#0d1b12] dark:text-white mb-2">Specific Causes Needing Your
+                    <h2 class="text-2xl font-black text-[#1F2937] dark:text-white mb-2">Specific Causes Needing Your
                         Support</h2>
                     <p class="text-gray-500 text-sm">Direct your impact to the areas that matter most to you.</p>
                 </div>
                 <a href="#"
-                    class="hidden md:flex items-center gap-1 text-[#11d452] font-bold text-sm hover:gap-2 transition-all">
+                    class="hidden md:flex items-center gap-1 text-primary font-bold text-sm hover:gap-2 transition-all">
                     View All Causes <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Cause 1: Clean Water -->
                 <div
-                    class="bg-white dark:bg-[#111] rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-800 flex flex-col h-full">
+                    class="bg-[#FCFBF9] dark:bg-[#111] rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-800 flex flex-col h-full">
                     <div class="h-48 w-full bg-gray-100 rounded-2xl mb-5 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=600&auto=format&fit=crop"
                             alt="Clean Water"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                     <span
-                        class="bg-[#e6fcf5] text-[#0d1b12] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider w-max mb-3">Sustainable
+                        class="bg-primary/10 text-[#1F2937] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider w-max mb-3">Sustainable
                         Development</span>
-                    <h3 class="text-xl font-bold text-[#0d1b12] dark:text-white mb-2">Clean Water Project</h3>
+                    <h3 class="text-xl font-bold text-[#1F2937] dark:text-white mb-2">Clean Water Project</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
                         Providing sustainable water systems to rural communities in Sub-Saharan Africa.
                     </p>
-
+ 
                     <div class="mb-5">
                         <div class="flex justify-between text-xs font-bold text-gray-400 mb-2">
-                            <span class="text-[#0d1b12] dark:text-white">62% Reached</span>
-                            <span class="text-[#11d452]">$12,400 raised of $20,000</span>
+                            <span class="text-[#1F2937] dark:text-white">62% Reached</span>
+                            <span class="text-primary">$12,400 raised of $20,000</span>
                         </div>
                         <div class="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
-                            <div class="bg-[#11d452] h-full rounded-full" style="width: 62%"></div>
+                            <div class="bg-primary h-full rounded-full" style="width: 62%"></div>
                         </div>
                     </div>
-
+ 
                     <button
-                        class="w-full py-3 bg-[#e6fcf5] dark:bg-[#11d452]/20 text-[#0d1b12] dark:text-[#11d452] font-bold rounded-xl hover:bg-[#d4f7ea] dark:hover:bg-[#11d452]/30 transition-colors">
+                        class="w-full py-3 bg-primary/10 dark:bg-primary/20 text-[#1F2937] dark:text-primary font-bold rounded-xl hover:brightness-110 transition-colors">
                         Donate to this Cause
                     </button>
                 </div>
 
-                <!-- Cause 2: Emergency Relief -->
                 <div
-                    class="bg-white dark:bg-[#111] rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-800 flex flex-col h-full">
+                    class="bg-[#FCFBF9] dark:bg-[#111] rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-800 flex flex-col h-full">
                     <div class="h-48 w-full bg-gray-100 rounded-2xl mb-5 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=600&auto=format&fit=crop"
                             alt="Emergency Relief"
@@ -164,30 +148,29 @@
                     <span
                         class="bg-[#ffedd5] text-[#9a3412] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider w-max mb-3">Urgent
                         Need</span>
-                    <h3 class="text-xl font-bold text-[#0d1b12] dark:text-white mb-2">Emergency Relief</h3>
+                    <h3 class="text-xl font-bold text-[#1F2937] dark:text-white mb-2">Emergency Relief</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
                         Rapid response and essential supplies for families affected by recent natural disasters.
                     </p>
-
+ 
                     <div class="mb-5">
                         <div class="flex justify-between text-xs font-bold text-gray-400 mb-2">
-                            <span class="text-[#0d1b12] dark:text-white">90% Reached</span>
-                            <span class="text-[#11d452]">$45,000 raised of $50,000</span>
+                            <span class="text-[#1F2937] dark:text-white">90% Reached</span>
+                            <span class="text-primary">$45,000 raised of $50,000</span>
                         </div>
                         <div class="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
-                            <div class="bg-[#11d452] h-full rounded-full" style="width: 90%"></div>
+                            <div class="bg-primary h-full rounded-full" style="width: 90%"></div>
                         </div>
                     </div>
-
+ 
                     <button
-                        class="w-full py-3 bg-[#e6fcf5] dark:bg-[#11d452]/20 text-[#0d1b12] dark:text-[#11d452] font-bold rounded-xl hover:bg-[#d4f7ea] dark:hover:bg-[#11d452]/30 transition-colors">
+                        class="w-full py-3 bg-primary/10 dark:bg-primary/20 text-[#1F2937] dark:text-primary font-bold rounded-xl hover:brightness-110 transition-colors">
                         Donate to this Cause
                     </button>
                 </div>
 
-                <!-- Cause 3: Education -->
                 <div
-                    class="bg-white dark:bg-[#111] rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-800 flex flex-col h-full">
+                    class="bg-[#FCFBF9] dark:bg-[#111] rounded-[1.5rem] p-5 shadow-sm hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-800 flex flex-col h-full">
                     <div class="h-48 w-full bg-gray-100 rounded-2xl mb-5 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop"
                             alt="Education"
@@ -195,30 +178,30 @@
                     </div>
                     <span
                         class="bg-[#dbeafe] text-[#1e40af] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider w-max mb-3">Education</span>
-                    <h3 class="text-xl font-bold text-[#0d1b12] dark:text-white mb-2">Education for All</h3>
+                    <h3 class="text-xl font-bold text-[#1F2937] dark:text-white mb-2">Education for All</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
                         Supplying books, uniforms, and technology to underprivileged students in rural areas.
                     </p>
-
+ 
                     <div class="mb-5">
                         <div class="flex justify-between text-xs font-bold text-gray-400 mb-2">
-                            <span class="text-[#0d1b12] dark:text-white">54% Reached</span>
-                            <span class="text-[#11d452]">$8,200 raised of $15,000</span>
+                            <span class="text-[#1F2937] dark:text-white">54% Reached</span>
+                            <span class="text-primary">$8,200 raised of $15,000</span>
                         </div>
                         <div class="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
-                            <div class="bg-[#11d452] h-full rounded-full" style="width: 54%"></div>
+                            <div class="bg-primary h-full rounded-full" style="width: 54%"></div>
                         </div>
                     </div>
-
+ 
                     <button
-                        class="w-full py-3 bg-[#e6fcf5] dark:bg-[#11d452]/20 text-[#0d1b12] dark:text-[#11d452] font-bold rounded-xl hover:bg-[#d4f7ea] dark:hover:bg-[#11d452]/30 transition-colors">
+                        class="w-full py-3 bg-primary/10 dark:bg-primary/20 text-[#1F2937] dark:text-primary font-bold rounded-xl hover:brightness-110 transition-colors">
                         Donate to this Cause
                     </button>
                 </div>
             </div>
 
             <div class="md:hidden mt-6 text-center">
-                <a href="#" class="inline-flex items-center gap-1 text-[#11d452] font-bold text-sm">
+                <a href="#" class="inline-flex items-center gap-1 text-primary font-bold text-sm">
                     View All Causes <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
             </div>
@@ -227,37 +210,37 @@
         <!-- General Donation -->
         <section id="donation-form" class="max-w-[1240px] w-full px-5 pb-24 mx-auto flex justify-center mt-12">
             <div
-                class="bg-white dark:bg-[#111] border border-gray-100 dark:border-gray-800 shadow-xl rounded-[2rem] p-8 md:p-12 w-full max-w-[600px] text-center">
-                <h2 class="text-2xl font-black text-[#0d1b12] dark:text-white mb-3">Make a General Donation</h2>
+                class="bg-[#FCFBF9] dark:bg-[#111] border border-gray-100 dark:border-gray-800 shadow-xl rounded-[2rem] p-8 md:p-12 w-full max-w-[600px] text-center">
+                <h2 class="text-2xl font-black text-[#1F2937] dark:text-white mb-3">Make a General Donation</h2>
                 <p class="text-gray-500 text-sm mb-8 max-w-sm mx-auto">
                     Support our overall operations and help us allocate funds where they are most needed.
                 </p>
 
                 <!-- Toggle -->
-                <div class="bg-[#f6f8f6] dark:bg-[#222] p-1.5 rounded-full inline-flex items-center mb-8 mx-auto">
+                <div class="bg-background-light dark:bg-[#222] p-1.5 rounded-full inline-flex items-center mb-8 mx-auto shadow-inner">
                     <button
-                        class="bg-white dark:bg-[#111] text-[#0d1b12] dark:text-white shadow-sm font-bold text-xs px-6 py-2.5 rounded-full transition-all">One-time</button>
+                        class="bg-white dark:bg-[#111] text-[#1F2937] dark:text-white shadow-sm font-bold text-xs px-6 py-2.5 rounded-full transition-all">One-time</button>
                     <button
-                        class="text-gray-500 font-bold text-xs px-6 py-2.5 rounded-full hover:text-[#0d1b12] dark:hover:text-white transition-all">Monthly</button>
+                        class="text-gray-500 font-bold text-xs px-6 py-2.5 rounded-full hover:text-[#1F2937] dark:hover:text-white transition-all">Monthly</button>
                 </div>
 
                 <!-- Amounts -->
                 <div class="grid grid-cols-4 gap-3 mb-8">
                     <button
-                        class="border border-[#11d452] bg-[#e6fcf5] dark:bg-[#11d452]/20 text-[#0d1b12] dark:text-[#11d452] font-bold py-4 rounded-2xl transition-all shadow-sm ring-2 ring-[#11d452] relative overflow-hidden">$25</button>
+                        class="border border-primary bg-primary/10 text-primary font-bold py-4 rounded-2xl transition-all shadow-sm ring-2 ring-primary relative overflow-hidden">$25</button>
                     <button
-                        class="border border-gray-100 dark:border-[#222] hover:border-[#11d452] dark:hover:border-[#11d452] text-[#0d1b12] dark:text-white font-bold py-4 rounded-2xl transition-all">$50</button>
+                        class="border border-gray-100 dark:border-[#222] hover:border-primary dark:hover:border-primary text-[#1F2937] dark:text-white font-bold py-4 rounded-2xl transition-all">$50</button>
                     <button
-                        class="border border-gray-100 dark:border-[#222] hover:border-[#11d452] dark:hover:border-[#11d452] text-[#0d1b12] dark:text-white font-bold py-4 rounded-2xl transition-all">$100</button>
+                        class="border border-gray-100 dark:border-[#222] hover:border-primary dark:hover:border-primary text-[#1F2937] dark:text-white font-bold py-4 rounded-2xl transition-all">$100</button>
                     <button
-                        class="border border-gray-100 dark:border-[#222] hover:border-[#11d452] dark:hover:border-[#11d452] text-[#0d1b12] dark:text-white font-bold py-4 rounded-2xl transition-all text-xs">Custom</button>
+                        class="border border-gray-100 dark:border-[#222] hover:border-primary dark:hover:border-primary text-[#1F2937] dark:text-white font-bold py-4 rounded-2xl transition-all text-xs">Custom</button>
                 </div>
 
                 <!-- Impact Message -->
                 <div
-                    class="bg-[#e6fcf5] dark:bg-[#11d452]/10 border border-[#11d452]/20 p-4 rounded-2xl mb-8 flex items-center gap-3 text-left">
-                    <span class="material-symbols-outlined text-[#11d452] shrink-0">favorite</span>
-                    <p class="text-xs text-[#0d1b12] dark:text-[#11d452] font-medium leading-relaxed">
+                    class="bg-primary/10 dark:bg-primary/10 border border-primary/20 p-4 rounded-2xl mb-8 flex items-center gap-3 text-left">
+                    <span class="material-symbols-outlined text-primary shrink-0">favorite</span>
+                    <p class="text-xs text-[#1F2937] dark:text-primary font-medium leading-relaxed">
                         <span class="font-bold">$25</span> can provide clean drinking water for a family of four for one
                         month.
                     </p>
@@ -265,7 +248,7 @@
 
                 <!-- Pay Button -->
                 <button
-                    class="w-full bg-[#11d452] text-[#0d1b12] font-bold py-4 rounded-2xl hover:bg-[#0ebc49] transition-all transform hover:-translate-y-1 shadow-lg shadow-[#11d452]/20 mb-6">
+                    class="w-full bg-primary text-white font-bold py-4 rounded-2xl hover:brightness-110 transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/20 mb-6">
                     Complete Donation
                 </button>
 
@@ -286,64 +269,7 @@
 
 
     <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <!-- Brand Column -->
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="material-symbols-outlined logo-icon">eco</span>
-                        <h3>CompassionGlobal</h3>
-                    </div>
-                    <p>Empowering communities through sustainable action and transparent leadership. Join us in making a
-                        lasting impact.</p>
-                </div>
-
-                <!-- Links Column -->
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="team.html">Meet the Team</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Resources Column -->
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Annual Report</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter Column -->
-                <div class="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Join our mailing list for impact updates.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                    <p class="disclaimer">By subscribing, you agree to our privacy policy.</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2024 CompassionGlobal. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">local_police</span></a>
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">shutter_speed</span></a>
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">work</span></a>
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">share</span></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" title="Back to Top">

@@ -26,9 +26,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#11d452',
-                        'background-light': '#f6f8f6',
-                        'background-dark': '#102216',
+                        primary: '#C9A24A',
+                        'background-light': '#F9F7F5',
+                        'background-dark': '#111822',
                     },
                     fontFamily: {
                         display: ['Inter', 'sans-serif'],
@@ -64,28 +64,14 @@
     </div>
 
     <!-- ================= HEADER ================= -->
-    <header class="header dark-nav">
-        <div class="container nav">
-            <a href="index.html" class="logo">
-                <img src="logo-jpg-removebg-preview-1.png" alt="CompassionGlobal">
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="team.html">Team</a>
-                <a href="contact.html" class="active">Contact</a>
-            </nav>
-            <a href="donate.html" class="btn-primary">Donate</a>
-        </div>
-    </header>
+    <div id="navbar-placeholder"></div>
 
     <!-- ================= MAIN CONTENT ================= -->
     <main
-        class="flex flex-col items-center w-full min-h-screen bg-[#f8f9fa] dark:bg-black font-display text-[#111] pt-32 pb-12">
+        class="flex flex-col items-center w-full min-h-screen bg-background-light dark:bg-background-dark font-display text-[#1F2937] pt-32 pb-12">
         <!-- Page Header -->
         <section class="max-w-4xl w-full px-5 pt-20 pb-12 text-center">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-[#0d1b12] dark:text-white">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-[#1F2937] dark:text-white">
                 Contact: Inquiries & Support
             </h1>
             <p class="text-[#555] dark:text-gray-400 text-lg">
@@ -97,34 +83,31 @@
         <!-- Top Contact Cards -->
         <section class="max-w-3xl w-full px-5 mb-12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Email Card -->
                 <div
-                    class="bg-white dark:bg-[#111] p-6 rounded-2xl flex items-center gap-4 shadow-sm border border-gray-100 dark:border-gray-800">
-                    <div class="w-12 h-12 rounded-full bg-[#f0fdf4] flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-[#11d452]">mail</span>
+                    class="bg-background-light dark:bg-background-dark p-6 rounded-2xl flex items-center gap-4 shadow-sm border border-gray-100 dark:border-gray-800">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-primary">mail</span>
                     </div>
                     <div>
                         <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">
                             EMAIL US
                         </p>
-                        <a href="mailto:hello@nonprofit.org"
-                            class="font-semibold text-lg text-[#0d1b12] dark:text-white hover:text-[#11d452] transition-colors">hello@nonprofit.org</a>
+                        <a href="mailto:greenrootiwc@gmail.com"
+                            class="font-semibold text-lg text-[#1F2937] dark:text-white hover:text-primary transition-colors">greenrootiwc@gmail.com</a>
                     </div>
                 </div>
 
-                <!-- Phone Card -->
                 <div
-                    class="bg-white dark:bg-[#111] p-6 rounded-2xl flex items-center gap-4 shadow-sm border border-gray-100 dark:border-gray-800">
-                    <div class="w-12 h-12 rounded-full bg-[#f0fdf4] flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-[#11d452]">call</span>
+                    class="bg-background-light dark:bg-background-dark p-6 rounded-2xl flex items-center gap-4 shadow-sm border border-gray-100 dark:border-gray-800">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-primary">call</span>
                     </div>
                     <div>
                         <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">
                             CALL US
                         </p>
-                        <a href="tel:+15550000000"
-                            class="font-semibold text-lg text-[#0d1b12] dark:text-white hover:text-[#11d452] transition-colors">+1
-                            (555) 000-0000</a>
+                        <a href="tel:9747588560"
+                            class="font-semibold text-lg text-[#1F2937] dark:text-white hover:text-primary transition-colors">9747588560</a>
                     </div>
                 </div>
             </div>
@@ -134,8 +117,8 @@
         <div class="max-w-[1000px] w-full px-5 flex flex-col gap-20 pb-24">
             <!-- Contact Form -->
             <section
-                class="bg-white dark:bg-[#111] p-8 md:p-12 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-800">
-                <h2 class="text-2xl font-bold mb-8 text-[#0d1b12] dark:text-white">
+                class="bg-background-light dark:bg-background-dark p-8 md:p-12 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-800">
+                <h2 class="text-2xl font-bold mb-8 text-[#1F2937] dark:text-white">
                     Send us a message
                 </h2>
                 <form class="flex flex-col gap-6">
@@ -144,13 +127,13 @@
                             <label for="name" class="text-sm font-medium text-gray-600 dark:text-gray-300">Full
                                 Name</label>
                             <input type="text" id="name" placeholder="John Doe"
-                                class="w-full px-5 py-4 rounded-xl bg-[#f6f8f6] dark:bg-[#222] border-none focus:ring-2 focus:ring-[#11d452]/50 outline-none transition-all placeholder-gray-400" />
+                                class="w-full px-5 py-4 rounded-xl bg-background-light dark:bg-[#222] border-none focus:ring-2 focus:ring-primary/50 outline-none transition-all placeholder-gray-400 shadow-inner" />
                         </div>
                         <div class="flex flex-col gap-2">
                             <label for="email" class="text-sm font-medium text-gray-600 dark:text-gray-300">Email
                                 Address</label>
                             <input type="email" id="email" placeholder="john@example.com"
-                                class="w-full px-5 py-4 rounded-xl bg-[#f6f8f6] dark:bg-[#222] border-none focus:ring-2 focus:ring-[#11d452]/50 outline-none transition-all placeholder-gray-400" />
+                                class="w-full px-5 py-4 rounded-xl bg-background-light dark:bg-[#222] border-none focus:ring-2 focus:ring-primary/50 outline-none transition-all placeholder-gray-400 shadow-inner" />
                         </div>
                     </div>
 
@@ -159,7 +142,7 @@
                             class="text-sm font-medium text-gray-600 dark:text-gray-300">Subject</label>
                         <div class="relative">
                             <select id="subject"
-                                class="w-full px-5 py-4 rounded-xl bg-[#f6f8f6] dark:bg-[#222] border-none focus:ring-2 focus:ring-[#11d452]/50 outline-none transition-all appearance-none cursor-pointer text-gray-600 dark:text-gray-300">
+                                class="w-full px-5 py-4 rounded-xl bg-background-light dark:bg-[#222] border-none focus:ring-2 focus:ring-primary/50 outline-none transition-all appearance-none cursor-pointer text-gray-600 dark:text-gray-300 shadow-inner">
                                 <option>General Inquiry</option>
                                 <option>Volunteering</option>
                                 <option>Donations</option>
@@ -174,12 +157,12 @@
                         <label for="message"
                             class="text-sm font-medium text-gray-600 dark:text-gray-300">Message</label>
                         <textarea id="message" rows="4" placeholder="How can we help you?"
-                            class="w-full px-5 py-4 rounded-xl bg-[#f6f8f6] dark:bg-[#222] border-none focus:ring-2 focus:ring-[#11d452]/50 outline-none transition-all resize-none placeholder-gray-400"></textarea>
+                            class="w-full px-5 py-4 rounded-xl bg-background-light dark:bg-[#222] border-none focus:ring-2 focus:ring-primary/50 outline-none transition-all resize-none placeholder-gray-400 shadow-inner"></textarea>
                     </div>
 
                     <div class="text-center mt-4">
                         <button type="button"
-                            class="bg-[#11d452] text-[#0d1b12] font-bold px-10 py-4 rounded-full hover:shadow-lg hover:shadow-[#11d452]/30 hover:scale-105 transition-all duration-300">
+                            class="bg-primary text-white font-bold px-10 py-4 rounded-full hover:shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300">
                             Send Message
                         </button>
                         <p class="flex items-center justify-center gap-2 text-xs text-gray-400 mt-4">
@@ -192,29 +175,29 @@
 
             <!-- Why Reach Out -->
             <section class="text-center">
-                <h3 class="text-xl font-bold mb-10 text-[#0d1b12] dark:text-white">
+                <h3 class="text-xl font-bold mb-10 text-[#1F2937] dark:text-white">
                     Why Reach Out?
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="flex flex-col items-center gap-4">
-                        <div class="w-16 h-16 rounded-full bg-[#f0fdf4] flex items-center justify-center mb-2">
-                            <span class="material-symbols-outlined text-2xl text-[#11d452]">volunteer_activism</span>
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-2xl text-primary">volunteer_activism</span>
                         </div>
                         <p class="text-sm text-gray-600 dark:text-gray-300 max-w-[200px]">
                             Find volunteer opportunities that match your skills.
                         </p>
                     </div>
                     <div class="flex flex-col items-center gap-4">
-                        <div class="w-16 h-16 rounded-full bg-[#f0fdf4] flex items-center justify-center mb-2">
-                            <span class="material-symbols-outlined text-2xl text-[#11d452]">savings</span>
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-2xl text-primary">savings</span>
                         </div>
                         <p class="text-sm text-gray-600 dark:text-gray-300 max-w-[200px]">
                             Learn exactly how your donations are making an impact.
                         </p>
                     </div>
                     <div class="flex flex-col items-center gap-4">
-                        <div class="w-16 h-16 rounded-full bg-[#f0fdf4] flex items-center justify-center mb-2">
-                            <span class="material-symbols-outlined text-2xl text-[#11d452]">handshake</span>
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-2">
+                            <span class="material-symbols-outlined text-2xl text-primary">handshake</span>
                         </div>
                         <p class="text-sm text-gray-600 dark:text-gray-300 max-w-[200px]">
                             Discuss partnership opportunities for community growth.
@@ -225,7 +208,7 @@
 
             <!-- Location & Hours -->
             <section
-                class="bg-white dark:bg-[#111] p-4 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-800">
+                class="bg-background-light dark:bg-background-dark p-4 rounded-[2rem] shadow-sm border border-gray-100 dark:border-gray-800">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <!-- Map/Image -->
                     <div class="h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden relative bg-gray-100 group">
@@ -240,15 +223,15 @@
 
                     <!-- Details -->
                     <div class="p-4 md:p-8">
-                        <h3 class="text-2xl font-bold mb-8 text-[#0d1b12] dark:text-white">
+                        <h3 class="text-2xl font-bold mb-8 text-[#1F2937] dark:text-white">
                             Location & Hours
                         </h3>
 
                         <div class="flex flex-col gap-8">
                             <div class="flex items-start gap-4">
-                                <span class="material-symbols-outlined text-[#11d452] mt-1">location_on</span>
+                                <span class="material-symbols-outlined text-primary mt-1">location_on</span>
                                 <div>
-                                    <h4 class="font-bold text-[#0d1b12] dark:text-white mb-1">
+                                    <h4 class="font-bold text-[#1F2937] dark:text-white mb-1">
                                         Headquarters
                                     </h4>
                                     <p class="text-gray-500 dark:text-gray-400 text-sm">
@@ -258,9 +241,9 @@
                             </div>
 
                             <div class="flex items-start gap-4">
-                                <span class="material-symbols-outlined text-[#11d452] mt-1">schedule</span>
+                                <span class="material-symbols-outlined text-primary mt-1">schedule</span>
                                 <div>
-                                    <h4 class="font-bold text-[#0d1b12] dark:text-white mb-1">
+                                    <h4 class="font-bold text-[#1F2937] dark:text-white mb-1">
                                         Working Hours
                                     </h4>
                                     <p class="text-gray-500 dark:text-gray-400 text-sm mb-1">
@@ -279,66 +262,8 @@
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <!-- Brand Column -->
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="material-symbols-outlined logo-icon">eco</span>
-                        <h3>CompassionGlobal</h3>
-                    </div>
-                    <p>
-                        Empowering communities through sustainable action and transparent
-                        leadership. Join us in making a lasting impact.
-                    </p>
-                </div>
-
-                <!-- Links Column -->
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="team.html">Meet the Team</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Resources Column -->
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Annual Report</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter Column -->
-                <div class="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Join our mailing list for impact updates.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required />
-                        <button type="submit">Subscribe</button>
-                    </form>
-                    <p class="disclaimer">By subscribing, you agree to our privacy policy.</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2024 CompassionGlobal. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">local_police</span></a>
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">shutter_speed</span></a>
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">work</span></a>
-                    <a href="#" class="social-icon"><span class="material-symbols-outlined">share</span></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- ================= FOOTER ================= -->
+    <div id="footer-placeholder"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" title="Back to Top">
