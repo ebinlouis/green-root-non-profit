@@ -66,12 +66,41 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Apply correct scroll styling
                 initHeaderScroll();
 
-                // Add dark-nav class if NOT on index page, to display dark text on white backgrounds
+                // Add dark-nav class if NOT on index page
                 if (currentPath !== "" && currentPath !== "index.html") {
                     const headerEl = document.querySelector(".header");
                     if (headerEl) {
                         headerEl.classList.add("dark-nav");
                     }
+                }
+
+                // Mobile Menu Toggle Logic
+                const menuToggle = document.getElementById("menu-toggle");
+                const header = document.querySelector(".header");
+
+                if (menuToggle && header) {
+                    menuToggle.addEventListener("click", () => {
+                        header.classList.toggle("menu-active");
+                        const icon = menuToggle.querySelector(".material-symbols-outlined");
+                        if (header.classList.contains("menu-active")) {
+                            icon.textContent = "close";
+                            document.body.style.overflow = "hidden";
+                        } else {
+                            icon.textContent = "menu";
+                            document.body.style.overflow = "auto";
+                        }
+                    });
+
+                    // Close menu when clicking a link
+                    const allLinks = document.querySelectorAll("#navbar-links a, .nav-actions a");
+                    allLinks.forEach(link => {
+                        link.addEventListener("click", () => {
+                            header.classList.remove("menu-active");
+                            const icon = menuToggle.querySelector(".material-symbols-outlined");
+                            if (icon) icon.textContent = "menu";
+                            document.body.style.overflow = "auto";
+                        });
+                    });
                 }
             })
             .catch(error => console.error("Error loading navbar:", error));
