@@ -209,9 +209,8 @@ html {
 .nav-content {
     display: flex;
     align-items: center;
-    gap: 40px;
     flex: 1;
-    justify-content: flex-end;
+    justify-content: space-between; /* Space out links container and actions */
 }
 
 #navbar-links {
@@ -226,6 +225,15 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.4s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    /* Perfect Centering Logic */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-actions {
+    margin-left: auto; /* Push the actions to the far right */
 }
 
 .nav a {
@@ -300,6 +308,8 @@ html {
     }
 
     #navbar-links {
+        position: static;
+        transform: none;
         flex-direction: column;
         background: transparent;
         border: none;
