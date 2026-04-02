@@ -311,9 +311,9 @@ html {
         position: static;
         transform: none;
         flex-direction: column;
-        background: transparent;
-        border: none;
-        box-shadow: none;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
         padding: 0;
         gap: 30px;
     }
@@ -325,6 +325,13 @@ html {
 
     .nav .btn-primary {
         scale: 1.2;
+    }
+
+    .nav-actions {
+        margin-left: 0; /* Reset desktop auto-margin */
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }
 
