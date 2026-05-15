@@ -46,7 +46,7 @@ initHeaderScroll();
 document.addEventListener("DOMContentLoaded", () => {
     const navbarPlaceholder = document.getElementById("navbar-placeholder");
     if (navbarPlaceholder) {
-        fetch("navbar.html")
+        fetch("components/navbar.html")
             .then(response => response.text())
             .then(data => {
                 navbarPlaceholder.innerHTML = data;
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load Footer Dynamically
     const footerPlaceholder = document.getElementById("footer-placeholder");
     if (footerPlaceholder) {
-        fetch("footer.html")
+        fetch("components/footer.html")
             .then(response => response.text())
             .then(data => {
                 footerPlaceholder.innerHTML = data;
