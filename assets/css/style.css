@@ -1542,3 +1542,8 @@ html {
 .whatsapp-float svg {
     fill: white;
 }
+
+.volunteer-images img {
+    object-position: center 10%;
+    transition: transform 0.3s ease;
+}
