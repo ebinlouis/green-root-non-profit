@@ -581,6 +581,7 @@ html {
     padding: 5px;
     border: 1px solid rgba(201, 162, 74, 0.3);
     /* Thin gold outline ring */
+    background-color: #ffffff;
 }
 
 /* Inner white space is automatic via padding, now the image itself */
