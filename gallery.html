@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | GreenRoot</title>
+    <link rel="icon" type="image/png" href="assets/images/logos/logo-jpg-removebg-preview-1.png" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Tailwind -->
+    <link href="assets/css/output.css" rel="stylesheet">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Hide scrollbar for tabs */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- HEADER -->
+    <div id="navbar-placeholder"></div>
+
+    <main class="flex flex-col items-center w-full min-h-screen">
+        
+        <!-- Hero Section -->
+        <section class="max-w-[1200px] w-full px-5 py-16 md:py-24 mt-20 mx-auto text-center">
+            <span class="text-primary font-bold tracking-[0.2em] text-xs uppercase block mb-4">Our Gallery</span>
+            <h1 class="text-[#1F2937] dark:text-white tracking-tight text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                See Our Impact in Action
+            </h1>
+            <p class="text-[#4b5563] dark:text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
+                Explore the visual stories of our work across Kerala. Browse our photo archives or watch our documentaries below.
+            </p>
+        </section>
+
+        <!-- ================= PHOTO GALLERY SECTION ================= -->
+        <section class="w-full bg-background-light dark:bg-background-dark/50 py-16 px-5 border-y border-primary/10 overflow-hidden">
+            <div class="max-w-[1200px] mx-auto">
+                
+                <div class="flex flex-col items-center mb-12">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">photo_library</span>
+                    <h2 class="text-3xl font-extrabold text-[#1F2937] dark:text-white">Photo Archives</h2>
+                </div>
+                
+                <!-- Photo Tab Navigation -->
+                <div class="flex items-center gap-3 mb-10 border-b border-primary/10 pb-2 overflow-x-auto whitespace-nowrap scrollbar-hide px-2 md:justify-center w-full photo-tabs">
+                    <button class="photo-tab-btn active px-8 py-3 rounded-t-lg text-sm font-bold border-b-4 border-primary bg-primary/10 text-primary transition-all shrink-0" data-target="photo-community">Community Programs</button>
+                    <button class="photo-tab-btn px-8 py-3 rounded-t-lg text-sm font-bold border-b-4 border-transparent text-[#4b5563] dark:text-gray-400 hover:text-primary hover:bg-primary/5 transition-all shrink-0" data-target="photo-environment">Environmental Work</button>
+                    <button class="photo-tab-btn px-8 py-3 rounded-t-lg text-sm font-bold border-b-4 border-transparent text-[#4b5563] dark:text-gray-400 hover:text-primary hover:bg-primary/5 transition-all shrink-0" data-target="photo-education">Education & Support</button>
+                </div>
+
+                <!-- PHOTO TAB CONTENT: Community -->
+                <div class="tab-content photo-content active" id="photo-community">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-xl border border-primary/5">
+                            <img src="assets/images/about/kerala_family_story.png" loading="lazy" alt="Community Support" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-white font-bold text-lg">Family Support Fund</h3>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-xl border border-primary/5">
+                            <img src="assets/images/hero/kerala_support_hero_1773168419206.png" loading="lazy" alt="Community Support" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-white font-bold text-lg">Women's Collective Meeting</h3>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-xl border border-primary/5">
+                            <img src="assets/images/about/kerala_about_image_1773334939591.png" loading="lazy" alt="Community Support" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-white font-bold text-lg">Local Market Drive</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHOTO TAB CONTENT: Environment -->
+                <div class="tab-content photo-content" id="photo-environment">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-xl border border-primary/5">
+                            <img src="assets/images/about/kerala_about_hero.png" loading="lazy" alt="Environment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-white font-bold text-lg">Organic Farming Project</h3>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-xl border border-primary/5">
+                            <img src="assets/images/hero/kerala_support_hero_1773168419206.png" loading="lazy" alt="Environment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-white font-bold text-lg">Mangrove Planting</h3>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-xl border border-primary/5">
+                            <img src="assets/images/about/about_hero_community.png" loading="lazy" alt="Environment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-white font-bold text-lg">Backwater Clean-up</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHOTO TAB CONTENT: Education -->
+                <div class="tab-content photo-content" id="photo-education">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-xl border border-primary/5">
+                            <img src="assets/images/about/about_hero_community.png" loading="lazy" alt="Education" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-white font-bold text-lg">School Supply Drive</h3>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-xl border border-primary/5">
+                            <img src="assets/images/about/kerala_about_image_1773334939591.png" loading="lazy" alt="Education" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-white font-bold text-lg">Digital Literacy Class</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= VIDEO GALLERY SECTION ================= -->
+        <section class="w-full bg-[#FCFBF9] dark:bg-background-dark py-20 px-5 overflow-hidden">
+            <div class="max-w-[1200px] mx-auto">
+                
+                <div class="flex flex-col items-center mb-12">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">play_circle</span>
+                    <h2 class="text-3xl font-extrabold text-[#1F2937] dark:text-white">Featured Videos</h2>
+                </div>
+                
+                <!-- Video Tab Navigation -->
+                <div class="flex items-center gap-3 mb-10 border-b border-primary/10 pb-2 overflow-x-auto whitespace-nowrap scrollbar-hide px-2 md:justify-center w-full video-tabs">
+                    <button class="video-tab-btn active px-8 py-3 rounded-t-lg text-sm font-bold border-b-4 border-primary bg-primary/10 text-primary transition-all shrink-0" data-target="video-community">Community Programs</button>
+                    <button class="video-tab-btn px-8 py-3 rounded-t-lg text-sm font-bold border-b-4 border-transparent text-[#4b5563] dark:text-gray-400 hover:text-primary hover:bg-primary/5 transition-all shrink-0" data-target="video-environment">Environmental Work</button>
+                    <button class="video-tab-btn px-8 py-3 rounded-t-lg text-sm font-bold border-b-4 border-transparent text-[#4b5563] dark:text-gray-400 hover:text-primary hover:bg-primary/5 transition-all shrink-0" data-target="video-education">Education & Support</button>
+                </div>
+
+                <!-- VIDEO TAB CONTENT: Community -->
+                <div class="tab-content video-content active" id="video-community">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="rounded-2xl overflow-hidden shadow-lg border border-primary/10 bg-white dark:bg-background-dark/50">
+                            <div class="aspect-video relative">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/6t6NnJsAC4o?si=jCAudkFWtc3FaLFp" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-[#1F2937] dark:text-white mb-2">സ്ത്രീ ശാക്തീകരണം (Women Empowerment)</h4>
+                                <p class="text-[#4b5563] dark:text-gray-400 text-sm">A look into our Kudumbashree support initiatives helping women start their own businesses in rural Kerala.</p>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg border border-primary/10 bg-white dark:bg-background-dark/50">
+                            <div class="aspect-video relative">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/0nTIfQ5_7XM?si=_fpZw-ba8gaAEqwo" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-[#1F2937] dark:text-white mb-2">ഗ്രാമീണ ആരോഗ്യം (Rural Healthcare)</h4>
+                                <p class="text-[#4b5563] dark:text-gray-400 text-sm">Highlights from our free medical camps and health awareness programs across Wayanad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO TAB CONTENT: Environment -->
+                <div class="tab-content video-content" id="video-environment">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="rounded-2xl overflow-hidden shadow-lg border border-primary/10 bg-white dark:bg-background-dark/50">
+                            <div class="aspect-video relative">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/pnLIpbFqkEk?si=DvqdMpjGKJz-hJQM" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-[#1F2937] dark:text-white mb-2">തീരസംരക്ഷണം (Coastal Protection)</h4>
+                                <p class="text-[#4b5563] dark:text-gray-400 text-sm">A short documentary on our massive mangrove planting initiatives in Alappuzha.</p>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg border border-primary/10 bg-white dark:bg-background-dark/50">
+                            <div class="aspect-video relative">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=7v8G0uH4q1sR-uA" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-[#1F2937] dark:text-white mb-2">ജൈവകൃഷി (Organic Farming)</h4>
+                                <p class="text-[#4b5563] dark:text-gray-400 text-sm">Documenting the journey of farmers in Munnar transitioning to 100% sustainable organic methods.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDEO TAB CONTENT: Education -->
+                <div class="tab-content video-content" id="video-education">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="rounded-2xl overflow-hidden shadow-lg border border-primary/10 bg-white dark:bg-background-dark/50">
+                            <div class="aspect-video relative">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=7v8G0uH4q1sR-uA" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-[#1F2937] dark:text-white mb-2">വിദ്യാഭ്യാസ മുന്നേറ്റം (Education Advance)</h4>
+                                <p class="text-[#4b5563] dark:text-gray-400 text-sm">Building smart classrooms and providing digital literacy to tribal children in Idukki.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section to maintain consistency -->
+        <section class="w-full px-5 py-24 bg-background-dark text-white text-center relative overflow-hidden border-t border-primary/10">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <div class="absolute top-0 left-0 w-96 h-96 bg-primary/40 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
+                <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2"></div>
+            </div>
+            <div class="max-w-3xl mx-auto relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Inspired by our work?</h2>
+                <p class="text-[#a8b3ac] text-lg mb-12">Your support fuels the transformation of communities around the globe.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="donate.html" class="flex items-center justify-center w-full sm:w-auto min-w-[200px] h-14 bg-primary text-white font-black rounded-xl hover:scale-105 transition-transform">
+                        Donate Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/919747588560" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <svg viewBox="0 0 24 24" width="30" height="30">
+            <path fill="currentColor"
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.01-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.431 5.63 1.432h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Loader logic
+        document.body.style.overflow = 'hidden';
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                const loader = document.getElementById('loader-wrapper');
+                loader.style.opacity = '0';
+                setTimeout(function () {
+                    loader.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 500);
+        });
+
+        // Independent Tab Logic for Photos and Videos
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // Photo Tabs
+            const photoBtns = document.querySelectorAll(".photo-tab-btn");
+            const photoContents = document.querySelectorAll(".photo-content");
+
+            photoBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    photoBtns.forEach(b => {
+                        b.classList.remove("active", "border-primary", "bg-primary/10", "text-primary");
+                        b.classList.add("border-transparent", "text-[#4b5563]", "dark:text-gray-400");
+                    });
+                    
+                    btn.classList.remove("border-transparent", "text-[#4b5563]", "dark:text-gray-400");
+                    btn.classList.add("active", "border-primary", "bg-primary/10", "text-primary");
+
+                    const targetId = btn.getAttribute("data-target");
+                    
+                    photoContents.forEach(content => {
+                        if (content.id === targetId) {
+                            content.classList.add("active");
+                        } else {
+                            content.classList.remove("active");
+                        }
+                    });
+                });
+            });
+
+            // Video Tabs
+            const videoBtns = document.querySelectorAll(".video-tab-btn");
+            const videoContents = document.querySelectorAll(".video-content");
+
+            videoBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    videoBtns.forEach(b => {
+                        b.classList.remove("active", "border-primary", "bg-primary/10", "text-primary");
+                        b.classList.add("border-transparent", "text-[#4b5563]", "dark:text-gray-400");
+                    });
+                    
+                    btn.classList.remove("border-transparent", "text-[#4b5563]", "dark:text-gray-400");
+                    btn.classList.add("active", "border-primary", "bg-primary/10", "text-primary");
+
+                    const targetId = btn.getAttribute("data-target");
+                    
+                    videoContents.forEach(content => {
+                        if (content.id === targetId) {
+                            content.classList.add("active");
+                        } else {
+                            content.classList.remove("active");
+                        }
+                    });
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
